@@ -1,6 +1,6 @@
 #include "fileManagerClient.h"
 
-FileManagerClient::FileManagerClient(char* ip = SERVER_IP, int port = PORT){
+FileManagerClient::FileManagerClient(char* ip, int port){
     this->serverId = initClient(ip, port);
 
     if (serverId <0 ) std::cout << "ERROR EN EL ARCHIVO" << __FILE__ << ":" << __LINE__ << "\n";
