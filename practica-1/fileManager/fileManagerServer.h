@@ -4,6 +4,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <cstring>
+
 #include "utils.h"
 #include "filemanager.h"
 #include "fileManagerClient.h"
@@ -19,4 +20,6 @@ class FileManagerServer{
 
         void recvOp(); //recibir operacion
         void opReadFile();
+        void opWriteFile();
+        void opListDir();
 };

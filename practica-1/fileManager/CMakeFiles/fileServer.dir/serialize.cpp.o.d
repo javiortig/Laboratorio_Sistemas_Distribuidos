@@ -1,7 +1,7 @@
-CMakeFiles/fileServer.dir/fileManagerServer.cpp.o: \
- /home/javiortig/uni/sistemas-distribuidos/practica_1/Pr1/fileManager/fileManagerServer.cpp \
+CMakeFiles/fileServer.dir/serialize.cpp.o: \
+ /home/javiortig/uni/sistemas-distribuidos/practica_1/Pr1/fileManager/serialize.cpp \
  /usr/include/stdc-predef.h \
- /home/javiortig/uni/sistemas-distribuidos/practica_1/Pr1/fileManager/fileManagerServer.h \
+ /home/javiortig/uni/sistemas-distribuidos/practica_1/Pr1/fileManager/serialize.h \
  /usr/include/c++/11/iostream \
  /usr/include/c++/11/x86_64-redhat-linux/bits/c++config.h \
  /usr/include/bits/wordsize.h \
@@ -125,46 +125,7 @@ CMakeFiles/fileServer.dir/fileManagerServer.cpp.o: \
  /usr/include/c++/11/bits/basic_ios.tcc \
  /usr/include/c++/11/bits/ostream.tcc /usr/include/c++/11/istream \
  /usr/include/c++/11/bits/istream.tcc /usr/include/c++/11/stdlib.h \
- /usr/include/c++/11/cstring /usr/include/string.h /usr/include/strings.h \
- /home/javiortig/uni/sistemas-distribuidos/practica_1/Pr1/fileManager/utils.h \
- /usr/include/sys/socket.h /usr/include/bits/types/struct_iovec.h \
- /usr/include/bits/socket.h /usr/include/bits/socket_type.h \
- /usr/include/bits/sockaddr.h /usr/include/asm/socket.h \
- /usr/include/asm-generic/socket.h /usr/include/linux/posix_types.h \
- /usr/include/linux/stddef.h /usr/include/asm/posix_types.h \
- /usr/include/asm/posix_types_64.h /usr/include/asm-generic/posix_types.h \
- /usr/include/asm/bitsperlong.h /usr/include/asm-generic/bitsperlong.h \
- /usr/include/asm/sockios.h /usr/include/asm-generic/sockios.h \
- /usr/include/bits/types/struct_osockaddr.h /usr/include/arpa/inet.h \
- /usr/include/netinet/in.h /usr/include/bits/in.h /usr/include/unistd.h \
- /usr/include/bits/posix_opt.h /usr/include/bits/environments.h \
- /usr/include/bits/confname.h /usr/include/bits/getopt_posix.h \
- /usr/include/bits/getopt_core.h /usr/include/bits/unistd_ext.h \
- /usr/include/linux/close_range.h /usr/include/c++/11/map \
- /usr/include/c++/11/bits/stl_tree.h \
- /usr/include/c++/11/ext/aligned_buffer.h \
- /usr/include/c++/11/bits/node_handle.h \
- /usr/include/c++/11/bits/stl_map.h /usr/include/c++/11/tuple \
- /usr/include/c++/11/utility /usr/include/c++/11/bits/stl_relops.h \
- /usr/include/c++/11/array /usr/include/c++/11/bits/uses_allocator.h \
- /usr/include/c++/11/bits/invoke.h \
- /usr/include/c++/11/bits/stl_multimap.h \
- /usr/include/c++/11/bits/erase_if.h /usr/include/c++/11/list \
- /usr/include/c++/11/bits/stl_list.h \
- /usr/include/c++/11/bits/allocated_ptr.h \
- /usr/include/c++/11/bits/list.tcc /usr/include/c++/11/thread \
- /usr/include/c++/11/bits/std_thread.h /usr/include/c++/11/bits/refwrap.h \
- /usr/include/c++/11/bits/unique_ptr.h \
- /usr/include/c++/11/bits/this_thread_sleep.h /usr/include/c++/11/chrono \
- /usr/include/c++/11/ratio /usr/include/c++/11/limits \
- /usr/include/c++/11/ctime /usr/include/c++/11/bits/parse_numbers.h \
- /home/javiortig/uni/sistemas-distribuidos/practica_1/Pr1/fileManager/filemanager.h \
  /usr/include/c++/11/vector /usr/include/c++/11/bits/stl_uninitialized.h \
  /usr/include/c++/11/bits/stl_vector.h \
  /usr/include/c++/11/bits/stl_bvector.h \
- /usr/include/c++/11/bits/vector.tcc /usr/include/dirent.h \
- /usr/include/bits/dirent.h /usr/include/bits/posix1_lim.h \
- /usr/include/bits/local_lim.h /usr/include/linux/limits.h \
- /usr/include/bits/dirent_ext.h \
- /home/javiortig/uni/sistemas-distribuidos/practica_1/Pr1/fileManager/fileManagerClient.h \
- /home/javiortig/uni/sistemas-distribuidos/practica_1/Pr1/fileManager/serialize.h
+ /usr/include/c++/11/bits/vector.tcc

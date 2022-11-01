@@ -10,6 +10,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/javiortig/uni/sistemas-distribuidos/practica_1/Pr1/fileManager/fileManagerClient.cpp" "CMakeFiles/fileClient.dir/fileManagerClient.cpp.o" "gcc" "CMakeFiles/fileClient.dir/fileManagerClient.cpp.o.d"
   "/home/javiortig/uni/sistemas-distribuidos/practica_1/Pr1/fileManager/mainFileClient.cpp" "CMakeFiles/fileClient.dir/mainFileClient.cpp.o" "gcc" "CMakeFiles/fileClient.dir/mainFileClient.cpp.o.d"
+  "/home/javiortig/uni/sistemas-distribuidos/practica_1/Pr1/fileManager/serialize.cpp" "CMakeFiles/fileClient.dir/serialize.cpp.o" "gcc" "CMakeFiles/fileClient.dir/serialize.cpp.o.d"
   "/home/javiortig/uni/sistemas-distribuidos/practica_1/Pr1/fileManager/utils.cpp" "CMakeFiles/fileClient.dir/utils.cpp.o" "gcc" "CMakeFiles/fileClient.dir/utils.cpp.o.d"
   )
 

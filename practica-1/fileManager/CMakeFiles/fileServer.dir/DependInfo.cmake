@@ -12,6 +12,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/javiortig/uni/sistemas-distribuidos/practica_1/Pr1/fileManager/fileManagerServer.cpp" "CMakeFiles/fileServer.dir/fileManagerServer.cpp.o" "gcc" "CMakeFiles/fileServer.dir/fileManagerServer.cpp.o.d"
   "/home/javiortig/uni/sistemas-distribuidos/practica_1/Pr1/fileManager/filemanager.cpp" "CMakeFiles/fileServer.dir/filemanager.cpp.o" "gcc" "CMakeFiles/fileServer.dir/filemanager.cpp.o.d"
   "/home/javiortig/uni/sistemas-distribuidos/practica_1/Pr1/fileManager/mainFileServer.cpp" "CMakeFiles/fileServer.dir/mainFileServer.cpp.o" "gcc" "CMakeFiles/fileServer.dir/mainFileServer.cpp.o.d"
+  "/home/javiortig/uni/sistemas-distribuidos/practica_1/Pr1/fileManager/serialize.cpp" "CMakeFiles/fileServer.dir/serialize.cpp.o" "gcc" "CMakeFiles/fileServer.dir/serialize.cpp.o.d"
   "/home/javiortig/uni/sistemas-distribuidos/practica_1/Pr1/fileManager/utils.cpp" "CMakeFiles/fileServer.dir/utils.cpp.o" "gcc" "CMakeFiles/fileServer.dir/utils.cpp.o.d"
   )
 

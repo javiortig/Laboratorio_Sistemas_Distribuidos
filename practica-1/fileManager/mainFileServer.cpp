@@ -3,10 +3,11 @@
 // El core es la clase holamundo, los RPCs son las implementaciones en los
 // sistemas distribuidos que llaman al core
 #define PORT 30001
+#define DIR_PATH "/home/javiortig/uni/sistemas-distribuidos/practica_1/Pr1/fileManager/dirprueba"
 
 void threadClient(int clientId){
 
-    FileManagerServer* fms = new FileManagerServer(clientId, std::string("/home/ubuntu/practica_1/fileManager/dirprueba"));
+    FileManagerServer* fms = new FileManagerServer(clientId, std::string(DIR_PATH));
     fms->recvOp();
     delete fms;
 }
@@ -14,11 +15,15 @@ void threadClient(int clientId){
 int main(int argc,char** argv)
 {
     int serverId = initServer(PORT);
+
+    std::cout << "Servidor iniciado\n";
     
     while(1){
 
         if(checkNewConnections()){
             int clientId = getNewConnection();
+            std::cout << "Nueva conexion de: " << clientId << std::endl;
+
             std::thread* th= new std::thread(threadClient, clientId);
             //th->detach();
         }

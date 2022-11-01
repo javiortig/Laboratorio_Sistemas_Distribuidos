@@ -305,6 +305,33 @@ main_fm.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/fileManager.dir/build.make CMakeFiles/fileManager.dir/main_fm.cpp.s
 .PHONY : main_fm.cpp.s
 
+serialize.o: serialize.cpp.o
+.PHONY : serialize.o
+
+# target to build an object file
+serialize.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/fileClient.dir/build.make CMakeFiles/fileClient.dir/serialize.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/fileServer.dir/build.make CMakeFiles/fileServer.dir/serialize.cpp.o
+.PHONY : serialize.cpp.o
+
+serialize.i: serialize.cpp.i
+.PHONY : serialize.i
+
+# target to preprocess a source file
+serialize.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/fileClient.dir/build.make CMakeFiles/fileClient.dir/serialize.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/fileServer.dir/build.make CMakeFiles/fileServer.dir/serialize.cpp.i
+.PHONY : serialize.cpp.i
+
+serialize.s: serialize.cpp.s
+.PHONY : serialize.s
+
+# target to generate assembly for a file
+serialize.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/fileClient.dir/build.make CMakeFiles/fileClient.dir/serialize.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/fileServer.dir/build.make CMakeFiles/fileServer.dir/serialize.cpp.s
+.PHONY : serialize.cpp.s
+
 utils.o: utils.cpp.o
 .PHONY : utils.o
 
@@ -361,6 +388,9 @@ help:
 	@echo "... main_fm.o"
 	@echo "... main_fm.i"
 	@echo "... main_fm.s"
+	@echo "... serialize.o"
+	@echo "... serialize.i"
+	@echo "... serialize.s"
 	@echo "... utils.o"
 	@echo "... utils.i"
 	@echo "... utils.s"

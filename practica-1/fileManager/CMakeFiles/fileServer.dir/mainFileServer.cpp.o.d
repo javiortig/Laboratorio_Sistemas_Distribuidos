@@ -166,4 +166,5 @@ CMakeFiles/fileServer.dir/mainFileServer.cpp.o: \
  /usr/include/bits/dirent.h /usr/include/bits/posix1_lim.h \
  /usr/include/bits/local_lim.h /usr/include/linux/limits.h \
  /usr/include/bits/dirent_ext.h \
- /home/javiortig/uni/sistemas-distribuidos/practica_1/Pr1/fileManager/fileManagerClient.h
+ /home/javiortig/uni/sistemas-distribuidos/practica_1/Pr1/fileManager/fileManagerClient.h \
+ /home/javiortig/uni/sistemas-distribuidos/practica_1/Pr1/fileManager/serialize.h

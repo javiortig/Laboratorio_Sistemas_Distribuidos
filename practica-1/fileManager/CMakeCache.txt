@@ -219,15 +219,6 @@ fileManagerClient_IS_TOP_LEVEL:STATIC=ON
 fileManagerClient_SOURCE_DIR:STATIC=/home/javiortig/uni/sistemas-distribuidos/practica_1/Pr1/fileManager
 
 //Value Computed by CMake
-fileManagerCliente_BINARY_DIR:STATIC=/home/javiortig/uni/sistemas-distribuidos/practica_1/Pr1/fileManager
-
-//Value Computed by CMake
-fileManagerCliente_IS_TOP_LEVEL:STATIC=ON
-
-//Value Computed by CMake
-fileManagerCliente_SOURCE_DIR:STATIC=/home/javiortig/uni/sistemas-distribuidos/practica_1/Pr1/fileManager
-
-//Value Computed by CMake
 fileManagerServer_BINARY_DIR:STATIC=/home/javiortig/uni/sistemas-distribuidos/practica_1/Pr1/fileManager
 
 //Value Computed by CMake

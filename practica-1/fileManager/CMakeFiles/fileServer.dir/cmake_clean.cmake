@@ -7,6 +7,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/fileServer.dir/filemanager.cpp.o.d"
   "CMakeFiles/fileServer.dir/mainFileServer.cpp.o"
   "CMakeFiles/fileServer.dir/mainFileServer.cpp.o.d"
+  "CMakeFiles/fileServer.dir/serialize.cpp.o"
+  "CMakeFiles/fileServer.dir/serialize.cpp.o.d"
   "CMakeFiles/fileServer.dir/utils.cpp.o"
   "CMakeFiles/fileServer.dir/utils.cpp.o.d"
   "fileServer"
