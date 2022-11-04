@@ -1,1 +1,1 @@
-/usr/bin/c++ -rdynamic CMakeFiles/fileClient.dir/mainFileClient.cpp.o CMakeFiles/fileClient.dir/utils.cpp.o CMakeFiles/fileClient.dir/fileManagerClient.cpp.o CMakeFiles/fileClient.dir/serialize.cpp.o -o fileClient  -lpthread 
+/usr/bin/c++ -rdynamic CMakeFiles/fileClient.dir/mainFileClient.cpp.o CMakeFiles/fileClient.dir/utils.cpp.o CMakeFiles/fileClient.dir/fileManagerClient.cpp.o CMakeFiles/fileClient.dir/serialize.cpp.o CMakeFiles/fileClient.dir/filemanager.cpp.o -o fileClient  -lpthread 

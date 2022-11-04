@@ -246,6 +246,13 @@ CMakeFiles/fileServer.dir/fileManagerClient.cpp.o: fileManagerClient.cpp \
   /usr/include/c++/11/bits/stl_vector.h \
   /usr/include/c++/11/bits/stl_bvector.h \
   /usr/include/c++/11/bits/vector.tcc \
+  filemanager.h \
+  /usr/include/dirent.h \
+  /usr/include/bits/dirent.h \
+  /usr/include/bits/posix1_lim.h \
+  /usr/include/bits/local_lim.h \
+  /usr/include/linux/limits.h \
+  /usr/include/bits/dirent_ext.h \
   /usr/include/c++/11/cstring
 
 CMakeFiles/fileServer.dir/fileManagerServer.cpp.o: fileManagerServer.cpp \
@@ -1886,12 +1893,6 @@ serialize.cpp:
 
 /usr/include/c++/11/bits/stl_bvector.h:
 
-/usr/include/c++/11/bits/exception.h:
-
-/usr/include/c++/11/bits/locale_facets.h:
-
-fileManagerServer.h:
-
 /usr/include/c++/11/bits/nested_exception.h:
 
 filemanager.h:
@@ -1903,6 +1904,12 @@ filemanager.h:
 /usr/include/bits/local_lim.h:
 
 /usr/include/bits/dirent_ext.h:
+
+/usr/include/c++/11/bits/exception.h:
+
+/usr/include/c++/11/bits/locale_facets.h:
+
+fileManagerServer.h:
 
 serialize.h:
 

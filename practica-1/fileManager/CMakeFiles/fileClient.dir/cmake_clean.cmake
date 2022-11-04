@@ -1,6 +1,8 @@
 file(REMOVE_RECURSE
   "CMakeFiles/fileClient.dir/fileManagerClient.cpp.o"
   "CMakeFiles/fileClient.dir/fileManagerClient.cpp.o.d"
+  "CMakeFiles/fileClient.dir/filemanager.cpp.o"
+  "CMakeFiles/fileClient.dir/filemanager.cpp.o.d"
   "CMakeFiles/fileClient.dir/mainFileClient.cpp.o"
   "CMakeFiles/fileClient.dir/mainFileClient.cpp.o.d"
   "CMakeFiles/fileClient.dir/serialize.cpp.o"

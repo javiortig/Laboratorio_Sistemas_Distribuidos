@@ -1,7 +1,6 @@
-CMakeFiles/fileClient.dir/fileManagerClient.cpp.o: \
- /home/javiortig/uni/sistemas-distribuidos/practica_1/Pr1/fileManager/fileManagerClient.cpp \
+CMakeFiles/fileManager.dir/utils.cpp.o: \
+ /home/javiortig/uni/sistemas-distribuidos/practica_1/Pr1/fileManager/utils.cpp \
  /usr/include/stdc-predef.h \
- /home/javiortig/uni/sistemas-distribuidos/practica_1/Pr1/fileManager/fileManagerClient.h \
  /home/javiortig/uni/sistemas-distribuidos/practica_1/Pr1/fileManager/utils.h \
  /usr/include/sys/types.h /usr/include/features.h \
  /usr/include/features-time64.h /usr/include/bits/wordsize.h \
@@ -154,15 +153,4 @@ CMakeFiles/fileClient.dir/fileManagerClient.cpp.o: \
  /usr/include/c++/11/bits/unique_ptr.h \
  /usr/include/c++/11/bits/this_thread_sleep.h /usr/include/c++/11/chrono \
  /usr/include/c++/11/ratio /usr/include/c++/11/limits \
- /usr/include/c++/11/ctime /usr/include/c++/11/bits/parse_numbers.h \
- /home/javiortig/uni/sistemas-distribuidos/practica_1/Pr1/fileManager/serialize.h \
- /usr/include/c++/11/stdlib.h /usr/include/c++/11/vector \
- /usr/include/c++/11/bits/stl_uninitialized.h \
- /usr/include/c++/11/bits/stl_vector.h \
- /usr/include/c++/11/bits/stl_bvector.h \
- /usr/include/c++/11/bits/vector.tcc \
- /home/javiortig/uni/sistemas-distribuidos/practica_1/Pr1/fileManager/filemanager.h \
- /usr/include/dirent.h /usr/include/bits/dirent.h \
- /usr/include/bits/posix1_lim.h /usr/include/bits/local_lim.h \
- /usr/include/linux/limits.h /usr/include/bits/dirent_ext.h \
- /usr/include/c++/11/cstring
+ /usr/include/c++/11/ctime /usr/include/c++/11/bits/parse_numbers.h

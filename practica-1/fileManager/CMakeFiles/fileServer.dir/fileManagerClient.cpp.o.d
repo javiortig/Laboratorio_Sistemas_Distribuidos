@@ -160,4 +160,9 @@ CMakeFiles/fileServer.dir/fileManagerClient.cpp.o: \
  /usr/include/c++/11/bits/stl_uninitialized.h \
  /usr/include/c++/11/bits/stl_vector.h \
  /usr/include/c++/11/bits/stl_bvector.h \
- /usr/include/c++/11/bits/vector.tcc /usr/include/c++/11/cstring
+ /usr/include/c++/11/bits/vector.tcc \
+ /home/javiortig/uni/sistemas-distribuidos/practica_1/Pr1/fileManager/filemanager.h \
+ /usr/include/dirent.h /usr/include/bits/dirent.h \
+ /usr/include/bits/posix1_lim.h /usr/include/bits/local_lim.h \
+ /usr/include/linux/limits.h /usr/include/bits/dirent_ext.h \
+ /usr/include/c++/11/cstring

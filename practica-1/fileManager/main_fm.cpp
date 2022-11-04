@@ -1,9 +1,9 @@
 #include <iostream>
-#include "filemanager.h"
+#include "fileManagerClient.h"
 
 int main(int argc,char** argv)
 {
-    FileManager *fm=new FileManager("./dirprueba/");
+    FileManagerClient *fm=new FileManagerClient();
     vector<string*>* vfiles=fm->listFiles();
     cout<<"Lista de ficheros en el directorio de prueba:\n";
     for(unsigned int i=0;i<vfiles->size();++i)

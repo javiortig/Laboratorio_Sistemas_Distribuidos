@@ -2,6 +2,7 @@
 
 #include "utils.h"
 #include "serialize.h"
+#include "filemanager.h"
 
 #include <iostream>
 #include <stdio.h>
@@ -22,12 +23,19 @@
 class FileManagerClient{
     private:
     int serverId = -1;
+    char *ip = nullptr; 
+    int port = -1;
+    
 
     public:
     FileManagerClient(char* ip = SERVER_IP, int port = PORT);
-    //TODO: asegurar si debe escribir el a rchivo en el cliente o devolverlo en la funcion como un char*
-    void readFile(std::string& fileName);
+    
+    void oldReadFile(std::string& fileName, std::string* &fileContent);
+    void readFile(char* fileName, char* &data, unsigned long int & dataLength);
 
-    void writeFile(std::string &fileName, std::string &data, unsigned long dataLength);
-    void listDir();
+    void oldWriteFile(std::string &fileName, std::string &data, int dataLength);
+    void writeFile(char *fileName, char *data, unsigned long dataLength);
+    vector<string*>* listFiles();
+
+    void freeListedFiles(vector<string*>* fileList);
 };

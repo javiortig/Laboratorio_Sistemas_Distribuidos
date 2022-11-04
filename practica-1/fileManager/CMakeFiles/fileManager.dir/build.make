@@ -97,19 +97,67 @@ CMakeFiles/fileManager.dir/filemanager.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/fileManager.dir/filemanager.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/javiortig/uni/sistemas-distribuidos/practica_1/Pr1/fileManager/filemanager.cpp -o CMakeFiles/fileManager.dir/filemanager.cpp.s
 
+CMakeFiles/fileManager.dir/utils.cpp.o: CMakeFiles/fileManager.dir/flags.make
+CMakeFiles/fileManager.dir/utils.cpp.o: utils.cpp
+CMakeFiles/fileManager.dir/utils.cpp.o: CMakeFiles/fileManager.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/javiortig/uni/sistemas-distribuidos/practica_1/Pr1/fileManager/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/fileManager.dir/utils.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/fileManager.dir/utils.cpp.o -MF CMakeFiles/fileManager.dir/utils.cpp.o.d -o CMakeFiles/fileManager.dir/utils.cpp.o -c /home/javiortig/uni/sistemas-distribuidos/practica_1/Pr1/fileManager/utils.cpp
+
+CMakeFiles/fileManager.dir/utils.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/fileManager.dir/utils.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/javiortig/uni/sistemas-distribuidos/practica_1/Pr1/fileManager/utils.cpp > CMakeFiles/fileManager.dir/utils.cpp.i
+
+CMakeFiles/fileManager.dir/utils.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/fileManager.dir/utils.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/javiortig/uni/sistemas-distribuidos/practica_1/Pr1/fileManager/utils.cpp -o CMakeFiles/fileManager.dir/utils.cpp.s
+
+CMakeFiles/fileManager.dir/fileManagerClient.cpp.o: CMakeFiles/fileManager.dir/flags.make
+CMakeFiles/fileManager.dir/fileManagerClient.cpp.o: fileManagerClient.cpp
+CMakeFiles/fileManager.dir/fileManagerClient.cpp.o: CMakeFiles/fileManager.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/javiortig/uni/sistemas-distribuidos/practica_1/Pr1/fileManager/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/fileManager.dir/fileManagerClient.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/fileManager.dir/fileManagerClient.cpp.o -MF CMakeFiles/fileManager.dir/fileManagerClient.cpp.o.d -o CMakeFiles/fileManager.dir/fileManagerClient.cpp.o -c /home/javiortig/uni/sistemas-distribuidos/practica_1/Pr1/fileManager/fileManagerClient.cpp
+
+CMakeFiles/fileManager.dir/fileManagerClient.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/fileManager.dir/fileManagerClient.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/javiortig/uni/sistemas-distribuidos/practica_1/Pr1/fileManager/fileManagerClient.cpp > CMakeFiles/fileManager.dir/fileManagerClient.cpp.i
+
+CMakeFiles/fileManager.dir/fileManagerClient.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/fileManager.dir/fileManagerClient.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/javiortig/uni/sistemas-distribuidos/practica_1/Pr1/fileManager/fileManagerClient.cpp -o CMakeFiles/fileManager.dir/fileManagerClient.cpp.s
+
+CMakeFiles/fileManager.dir/serialize.cpp.o: CMakeFiles/fileManager.dir/flags.make
+CMakeFiles/fileManager.dir/serialize.cpp.o: serialize.cpp
+CMakeFiles/fileManager.dir/serialize.cpp.o: CMakeFiles/fileManager.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/javiortig/uni/sistemas-distribuidos/practica_1/Pr1/fileManager/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/fileManager.dir/serialize.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/fileManager.dir/serialize.cpp.o -MF CMakeFiles/fileManager.dir/serialize.cpp.o.d -o CMakeFiles/fileManager.dir/serialize.cpp.o -c /home/javiortig/uni/sistemas-distribuidos/practica_1/Pr1/fileManager/serialize.cpp
+
+CMakeFiles/fileManager.dir/serialize.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/fileManager.dir/serialize.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/javiortig/uni/sistemas-distribuidos/practica_1/Pr1/fileManager/serialize.cpp > CMakeFiles/fileManager.dir/serialize.cpp.i
+
+CMakeFiles/fileManager.dir/serialize.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/fileManager.dir/serialize.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/javiortig/uni/sistemas-distribuidos/practica_1/Pr1/fileManager/serialize.cpp -o CMakeFiles/fileManager.dir/serialize.cpp.s
+
 # Object files for target fileManager
 fileManager_OBJECTS = \
 "CMakeFiles/fileManager.dir/main_fm.cpp.o" \
-"CMakeFiles/fileManager.dir/filemanager.cpp.o"
+"CMakeFiles/fileManager.dir/filemanager.cpp.o" \
+"CMakeFiles/fileManager.dir/utils.cpp.o" \
+"CMakeFiles/fileManager.dir/fileManagerClient.cpp.o" \
+"CMakeFiles/fileManager.dir/serialize.cpp.o"
 
 # External object files for target fileManager
 fileManager_EXTERNAL_OBJECTS =
 
 fileManager: CMakeFiles/fileManager.dir/main_fm.cpp.o
 fileManager: CMakeFiles/fileManager.dir/filemanager.cpp.o
+fileManager: CMakeFiles/fileManager.dir/utils.cpp.o
+fileManager: CMakeFiles/fileManager.dir/fileManagerClient.cpp.o
+fileManager: CMakeFiles/fileManager.dir/serialize.cpp.o
 fileManager: CMakeFiles/fileManager.dir/build.make
 fileManager: CMakeFiles/fileManager.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/javiortig/uni/sistemas-distribuidos/practica_1/Pr1/fileManager/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable fileManager"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/javiortig/uni/sistemas-distribuidos/practica_1/Pr1/fileManager/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable fileManager"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/fileManager.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

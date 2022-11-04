@@ -29,38 +29,23 @@ void probarSerialize(){
 
 int main(int argc,char** argv)
 {
-    FileManagerClient* fmc = nullptr;
+    FileManagerClient* fmc = new FileManagerClient();
 
     //Probamos a listar los directorios
-    fmc = new FileManagerClient();
-    fmc->listDir();
+    fmc->listFiles();
     usleep(1);
-    delete fmc;
-
-    //Probamos a listar los directorios
-    fmc = new FileManagerClient();
-    fmc->listDir();
-    usleep(1);
-    delete fmc;
-
-    //Probamos a listar los directorios
-    fmc = new FileManagerClient();
-    fmc->listDir();
-    usleep(1);
-    delete fmc;
 
     //leer archivo del servidor
-    fmc = new FileManagerClient();
-    std::string nombre_leer("leer1.txt");
-    fmc->readFile(nombre_leer);
-    delete fmc; 
+    char nombre_leer[] = "leer1.txt";
+    char *buffer = nullptr;
+    unsigned long bufferLen = -1;
+    fmc->readFile(nombre_leer, buffer, bufferLen);
+    std::cout << buffer << endl;
 
-    fmc = new FileManagerClient();
     //probamos a escribir datos en el directorio escribir.txt del server
-    std::string nombre_escribir("escribir.txt");
-    std::string datos("esto deberia de escribirse.\nEsperemos que sea así.");
-    fmc->writeFile(nombre_escribir, datos, datos.length());
-    delete fmc;
+    char* nombre_escribir = "escribir.txt";
+    char *bufferB = "Escribo desde el cliente";
+    fmc->writeFile(nombre_escribir, bufferB, strlen(buffer));
 
 
     return 0;

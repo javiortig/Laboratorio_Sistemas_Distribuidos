@@ -19,7 +19,7 @@ public:
     vector<string*>* listFiles();
     void readFile(char* fileName, char* &data, unsigned long int & dataLength);
     void writeFile(char* fileName, char* data, unsigned long int dataLength);
-    void freeListedFiles(vector<string*>* fileList);
+    static void freeListedFiles(vector<string*>* fileList);
 };
 
 #endif // FILEMANAGER_H

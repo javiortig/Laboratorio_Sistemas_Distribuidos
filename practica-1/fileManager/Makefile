@@ -160,6 +160,7 @@ fileManagerClient.o: fileManagerClient.cpp.o
 
 # target to build an object file
 fileManagerClient.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/fileManager.dir/build.make CMakeFiles/fileManager.dir/fileManagerClient.cpp.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/fileClient.dir/build.make CMakeFiles/fileClient.dir/fileManagerClient.cpp.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/fileServer.dir/build.make CMakeFiles/fileServer.dir/fileManagerClient.cpp.o
 .PHONY : fileManagerClient.cpp.o
@@ -169,6 +170,7 @@ fileManagerClient.i: fileManagerClient.cpp.i
 
 # target to preprocess a source file
 fileManagerClient.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/fileManager.dir/build.make CMakeFiles/fileManager.dir/fileManagerClient.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/fileClient.dir/build.make CMakeFiles/fileClient.dir/fileManagerClient.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/fileServer.dir/build.make CMakeFiles/fileServer.dir/fileManagerClient.cpp.i
 .PHONY : fileManagerClient.cpp.i
@@ -178,6 +180,7 @@ fileManagerClient.s: fileManagerClient.cpp.s
 
 # target to generate assembly for a file
 fileManagerClient.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/fileManager.dir/build.make CMakeFiles/fileManager.dir/fileManagerClient.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/fileClient.dir/build.make CMakeFiles/fileClient.dir/fileManagerClient.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/fileServer.dir/build.make CMakeFiles/fileServer.dir/fileManagerClient.cpp.s
 .PHONY : fileManagerClient.cpp.s
@@ -212,6 +215,7 @@ filemanager.o: filemanager.cpp.o
 # target to build an object file
 filemanager.cpp.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/fileManager.dir/build.make CMakeFiles/fileManager.dir/filemanager.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/fileClient.dir/build.make CMakeFiles/fileClient.dir/filemanager.cpp.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/fileServer.dir/build.make CMakeFiles/fileServer.dir/filemanager.cpp.o
 .PHONY : filemanager.cpp.o
 
@@ -221,6 +225,7 @@ filemanager.i: filemanager.cpp.i
 # target to preprocess a source file
 filemanager.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/fileManager.dir/build.make CMakeFiles/fileManager.dir/filemanager.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/fileClient.dir/build.make CMakeFiles/fileClient.dir/filemanager.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/fileServer.dir/build.make CMakeFiles/fileServer.dir/filemanager.cpp.i
 .PHONY : filemanager.cpp.i
 
@@ -230,6 +235,7 @@ filemanager.s: filemanager.cpp.s
 # target to generate assembly for a file
 filemanager.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/fileManager.dir/build.make CMakeFiles/fileManager.dir/filemanager.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/fileClient.dir/build.make CMakeFiles/fileClient.dir/filemanager.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/fileServer.dir/build.make CMakeFiles/fileServer.dir/filemanager.cpp.s
 .PHONY : filemanager.cpp.s
 
@@ -310,6 +316,7 @@ serialize.o: serialize.cpp.o
 
 # target to build an object file
 serialize.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/fileManager.dir/build.make CMakeFiles/fileManager.dir/serialize.cpp.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/fileClient.dir/build.make CMakeFiles/fileClient.dir/serialize.cpp.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/fileServer.dir/build.make CMakeFiles/fileServer.dir/serialize.cpp.o
 .PHONY : serialize.cpp.o
@@ -319,6 +326,7 @@ serialize.i: serialize.cpp.i
 
 # target to preprocess a source file
 serialize.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/fileManager.dir/build.make CMakeFiles/fileManager.dir/serialize.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/fileClient.dir/build.make CMakeFiles/fileClient.dir/serialize.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/fileServer.dir/build.make CMakeFiles/fileServer.dir/serialize.cpp.i
 .PHONY : serialize.cpp.i
@@ -328,6 +336,7 @@ serialize.s: serialize.cpp.s
 
 # target to generate assembly for a file
 serialize.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/fileManager.dir/build.make CMakeFiles/fileManager.dir/serialize.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/fileClient.dir/build.make CMakeFiles/fileClient.dir/serialize.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/fileServer.dir/build.make CMakeFiles/fileServer.dir/serialize.cpp.s
 .PHONY : serialize.cpp.s
@@ -337,6 +346,7 @@ utils.o: utils.cpp.o
 
 # target to build an object file
 utils.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/fileManager.dir/build.make CMakeFiles/fileManager.dir/utils.cpp.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/fileClient.dir/build.make CMakeFiles/fileClient.dir/utils.cpp.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/fileServer.dir/build.make CMakeFiles/fileServer.dir/utils.cpp.o
 .PHONY : utils.cpp.o
@@ -346,6 +356,7 @@ utils.i: utils.cpp.i
 
 # target to preprocess a source file
 utils.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/fileManager.dir/build.make CMakeFiles/fileManager.dir/utils.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/fileClient.dir/build.make CMakeFiles/fileClient.dir/utils.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/fileServer.dir/build.make CMakeFiles/fileServer.dir/utils.cpp.i
 .PHONY : utils.cpp.i
@@ -355,6 +366,7 @@ utils.s: utils.cpp.s
 
 # target to generate assembly for a file
 utils.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/fileManager.dir/build.make CMakeFiles/fileManager.dir/utils.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/fileClient.dir/build.make CMakeFiles/fileClient.dir/utils.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/fileServer.dir/build.make CMakeFiles/fileServer.dir/utils.cpp.s
 .PHONY : utils.cpp.s

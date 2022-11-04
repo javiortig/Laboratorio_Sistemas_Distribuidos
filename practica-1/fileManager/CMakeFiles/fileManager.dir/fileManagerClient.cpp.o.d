@@ -1,4 +1,4 @@
-CMakeFiles/fileClient.dir/fileManagerClient.cpp.o: \
+CMakeFiles/fileManager.dir/fileManagerClient.cpp.o: \
  /home/javiortig/uni/sistemas-distribuidos/practica_1/Pr1/fileManager/fileManagerClient.cpp \
  /usr/include/stdc-predef.h \
  /home/javiortig/uni/sistemas-distribuidos/practica_1/Pr1/fileManager/fileManagerClient.h \

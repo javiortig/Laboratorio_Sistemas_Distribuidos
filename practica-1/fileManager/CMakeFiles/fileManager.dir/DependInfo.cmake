@@ -8,8 +8,11 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
+  "/home/javiortig/uni/sistemas-distribuidos/practica_1/Pr1/fileManager/fileManagerClient.cpp" "CMakeFiles/fileManager.dir/fileManagerClient.cpp.o" "gcc" "CMakeFiles/fileManager.dir/fileManagerClient.cpp.o.d"
   "/home/javiortig/uni/sistemas-distribuidos/practica_1/Pr1/fileManager/filemanager.cpp" "CMakeFiles/fileManager.dir/filemanager.cpp.o" "gcc" "CMakeFiles/fileManager.dir/filemanager.cpp.o.d"
   "/home/javiortig/uni/sistemas-distribuidos/practica_1/Pr1/fileManager/main_fm.cpp" "CMakeFiles/fileManager.dir/main_fm.cpp.o" "gcc" "CMakeFiles/fileManager.dir/main_fm.cpp.o.d"
+  "/home/javiortig/uni/sistemas-distribuidos/practica_1/Pr1/fileManager/serialize.cpp" "CMakeFiles/fileManager.dir/serialize.cpp.o" "gcc" "CMakeFiles/fileManager.dir/serialize.cpp.o.d"
+  "/home/javiortig/uni/sistemas-distribuidos/practica_1/Pr1/fileManager/utils.cpp" "CMakeFiles/fileManager.dir/utils.cpp.o" "gcc" "CMakeFiles/fileManager.dir/utils.cpp.o.d"
   )
 
 # Targets to which this target links.
