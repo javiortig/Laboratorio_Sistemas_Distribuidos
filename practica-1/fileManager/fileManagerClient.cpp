@@ -14,19 +14,17 @@ void FileManagerClient::readFile(char* fileName, char* &data, unsigned long int 
 
     int typeOp = OP_READ_FILE;
 
-    std::cout << "Traza 1\n";
     // Enviamos el tipo de operacion
     sendMSG(serverId, (const void *)&typeOp, sizeof(int));
-    std::cout << "Traza 2\n";
+
     // Enviamos el nombre del archivo a leer
     sendMSG(serverId, (const void *)fileName, strlen(fileName));
-    std::cout << "Traza 3\n";
+
     // Recibimos el contenido del archivo a leer
     recvMSG(serverId, (void **)&data, (int *)&dataLength);
-    std::cout << "Traza 4\n";
+
     //Cerramos operacion
     closeConnection(this->serverId);
-    std::cout << "Traza 5\n";
 }
 
 void FileManagerClient::writeFile(char *fileName, char *data, unsigned long dataLength)
@@ -50,7 +48,7 @@ void FileManagerClient::writeFile(char *fileName, char *data, unsigned long data
     closeConnection(this->serverId);
 }
 
-void FileManagerClient::oldReadFile(std::string &fileName, std::string* &fileContent)
+void FileManagerClient::readFile(std::string &fileName, std::string* &fileContent)
 {
     int typeOp = OP_READ_FILE;
     char *buffContent = nullptr;
@@ -75,7 +73,7 @@ void FileManagerClient::oldReadFile(std::string &fileName, std::string* &fileCon
     closeConnection(this->serverId);
 }
 
-void FileManagerClient::oldWriteFile(std::string &fileName, std::string &data, int dataLength)
+void FileManagerClient::writeFile(std::string &fileName, std::string &data, int dataLength)
 {
     int typeOp = OP_WRITE_FILE;
     int buffContentSize = 0;

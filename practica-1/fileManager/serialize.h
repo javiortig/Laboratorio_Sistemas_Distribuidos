@@ -8,9 +8,9 @@
 
 using namespace std;
 
-// Convierte el vector en string
+// Convierte un std::vector en un std::string separado por separator
 string* serializeStringVector(vector<string*> *v, char separator='&');
 
-//Convierte un string serializado en vector
+// Convierte un std::string en un std::vector separado por separator
 vector<string*>* deserializeStringVector(string *s, char separator='&');
 

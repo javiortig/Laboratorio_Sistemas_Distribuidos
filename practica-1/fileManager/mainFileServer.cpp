@@ -2,8 +2,6 @@
 
 // El core es la clase holamundo, los RPCs son las implementaciones en los
 // sistemas distribuidos que llaman al core
-#define PORT 30001
-#define DIR_PATH "/home/javiortig/uni/sistemas-distribuidos/practica_1/Pr1/fileManager/dirprueba"
 
 void threadClient(int clientId){
 

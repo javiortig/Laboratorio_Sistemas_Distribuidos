@@ -130,17 +130,17 @@ fileManager/fast:
 .PHONY : fileManager/fast
 
 #=============================================================================
-# Target rules for targets named fileClient
+# Target rules for targets named pruebaCliente
 
 # Build rule for target.
-fileClient: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 fileClient
-.PHONY : fileClient
+pruebaCliente: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 pruebaCliente
+.PHONY : pruebaCliente
 
 # fast build rule for target.
-fileClient/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/fileClient.dir/build.make CMakeFiles/fileClient.dir/build
-.PHONY : fileClient/fast
+pruebaCliente/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pruebaCliente.dir/build.make CMakeFiles/pruebaCliente.dir/build
+.PHONY : pruebaCliente/fast
 
 #=============================================================================
 # Target rules for targets named fileServer
@@ -161,7 +161,7 @@ fileManagerClient.o: fileManagerClient.cpp.o
 # target to build an object file
 fileManagerClient.cpp.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/fileManager.dir/build.make CMakeFiles/fileManager.dir/fileManagerClient.cpp.o
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/fileClient.dir/build.make CMakeFiles/fileClient.dir/fileManagerClient.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pruebaCliente.dir/build.make CMakeFiles/pruebaCliente.dir/fileManagerClient.cpp.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/fileServer.dir/build.make CMakeFiles/fileServer.dir/fileManagerClient.cpp.o
 .PHONY : fileManagerClient.cpp.o
 
@@ -171,7 +171,7 @@ fileManagerClient.i: fileManagerClient.cpp.i
 # target to preprocess a source file
 fileManagerClient.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/fileManager.dir/build.make CMakeFiles/fileManager.dir/fileManagerClient.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/fileClient.dir/build.make CMakeFiles/fileClient.dir/fileManagerClient.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pruebaCliente.dir/build.make CMakeFiles/pruebaCliente.dir/fileManagerClient.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/fileServer.dir/build.make CMakeFiles/fileServer.dir/fileManagerClient.cpp.i
 .PHONY : fileManagerClient.cpp.i
 
@@ -181,7 +181,7 @@ fileManagerClient.s: fileManagerClient.cpp.s
 # target to generate assembly for a file
 fileManagerClient.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/fileManager.dir/build.make CMakeFiles/fileManager.dir/fileManagerClient.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/fileClient.dir/build.make CMakeFiles/fileClient.dir/fileManagerClient.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pruebaCliente.dir/build.make CMakeFiles/pruebaCliente.dir/fileManagerClient.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/fileServer.dir/build.make CMakeFiles/fileServer.dir/fileManagerClient.cpp.s
 .PHONY : fileManagerClient.cpp.s
 
@@ -215,7 +215,7 @@ filemanager.o: filemanager.cpp.o
 # target to build an object file
 filemanager.cpp.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/fileManager.dir/build.make CMakeFiles/fileManager.dir/filemanager.cpp.o
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/fileClient.dir/build.make CMakeFiles/fileClient.dir/filemanager.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pruebaCliente.dir/build.make CMakeFiles/pruebaCliente.dir/filemanager.cpp.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/fileServer.dir/build.make CMakeFiles/fileServer.dir/filemanager.cpp.o
 .PHONY : filemanager.cpp.o
 
@@ -225,7 +225,7 @@ filemanager.i: filemanager.cpp.i
 # target to preprocess a source file
 filemanager.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/fileManager.dir/build.make CMakeFiles/fileManager.dir/filemanager.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/fileClient.dir/build.make CMakeFiles/fileClient.dir/filemanager.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pruebaCliente.dir/build.make CMakeFiles/pruebaCliente.dir/filemanager.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/fileServer.dir/build.make CMakeFiles/fileServer.dir/filemanager.cpp.i
 .PHONY : filemanager.cpp.i
 
@@ -235,33 +235,9 @@ filemanager.s: filemanager.cpp.s
 # target to generate assembly for a file
 filemanager.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/fileManager.dir/build.make CMakeFiles/fileManager.dir/filemanager.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/fileClient.dir/build.make CMakeFiles/fileClient.dir/filemanager.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pruebaCliente.dir/build.make CMakeFiles/pruebaCliente.dir/filemanager.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/fileServer.dir/build.make CMakeFiles/fileServer.dir/filemanager.cpp.s
 .PHONY : filemanager.cpp.s
-
-mainFileClient.o: mainFileClient.cpp.o
-.PHONY : mainFileClient.o
-
-# target to build an object file
-mainFileClient.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/fileClient.dir/build.make CMakeFiles/fileClient.dir/mainFileClient.cpp.o
-.PHONY : mainFileClient.cpp.o
-
-mainFileClient.i: mainFileClient.cpp.i
-.PHONY : mainFileClient.i
-
-# target to preprocess a source file
-mainFileClient.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/fileClient.dir/build.make CMakeFiles/fileClient.dir/mainFileClient.cpp.i
-.PHONY : mainFileClient.cpp.i
-
-mainFileClient.s: mainFileClient.cpp.s
-.PHONY : mainFileClient.s
-
-# target to generate assembly for a file
-mainFileClient.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/fileClient.dir/build.make CMakeFiles/fileClient.dir/mainFileClient.cpp.s
-.PHONY : mainFileClient.cpp.s
 
 mainFileServer.o: mainFileServer.cpp.o
 .PHONY : mainFileServer.o
@@ -286,6 +262,30 @@ mainFileServer.s: mainFileServer.cpp.s
 mainFileServer.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/fileServer.dir/build.make CMakeFiles/fileServer.dir/mainFileServer.cpp.s
 .PHONY : mainFileServer.cpp.s
+
+mainPruebaCliente.o: mainPruebaCliente.cpp.o
+.PHONY : mainPruebaCliente.o
+
+# target to build an object file
+mainPruebaCliente.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pruebaCliente.dir/build.make CMakeFiles/pruebaCliente.dir/mainPruebaCliente.cpp.o
+.PHONY : mainPruebaCliente.cpp.o
+
+mainPruebaCliente.i: mainPruebaCliente.cpp.i
+.PHONY : mainPruebaCliente.i
+
+# target to preprocess a source file
+mainPruebaCliente.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pruebaCliente.dir/build.make CMakeFiles/pruebaCliente.dir/mainPruebaCliente.cpp.i
+.PHONY : mainPruebaCliente.cpp.i
+
+mainPruebaCliente.s: mainPruebaCliente.cpp.s
+.PHONY : mainPruebaCliente.s
+
+# target to generate assembly for a file
+mainPruebaCliente.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pruebaCliente.dir/build.make CMakeFiles/pruebaCliente.dir/mainPruebaCliente.cpp.s
+.PHONY : mainPruebaCliente.cpp.s
 
 main_fm.o: main_fm.cpp.o
 .PHONY : main_fm.o
@@ -317,7 +317,7 @@ serialize.o: serialize.cpp.o
 # target to build an object file
 serialize.cpp.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/fileManager.dir/build.make CMakeFiles/fileManager.dir/serialize.cpp.o
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/fileClient.dir/build.make CMakeFiles/fileClient.dir/serialize.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pruebaCliente.dir/build.make CMakeFiles/pruebaCliente.dir/serialize.cpp.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/fileServer.dir/build.make CMakeFiles/fileServer.dir/serialize.cpp.o
 .PHONY : serialize.cpp.o
 
@@ -327,7 +327,7 @@ serialize.i: serialize.cpp.i
 # target to preprocess a source file
 serialize.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/fileManager.dir/build.make CMakeFiles/fileManager.dir/serialize.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/fileClient.dir/build.make CMakeFiles/fileClient.dir/serialize.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pruebaCliente.dir/build.make CMakeFiles/pruebaCliente.dir/serialize.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/fileServer.dir/build.make CMakeFiles/fileServer.dir/serialize.cpp.i
 .PHONY : serialize.cpp.i
 
@@ -337,7 +337,7 @@ serialize.s: serialize.cpp.s
 # target to generate assembly for a file
 serialize.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/fileManager.dir/build.make CMakeFiles/fileManager.dir/serialize.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/fileClient.dir/build.make CMakeFiles/fileClient.dir/serialize.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pruebaCliente.dir/build.make CMakeFiles/pruebaCliente.dir/serialize.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/fileServer.dir/build.make CMakeFiles/fileServer.dir/serialize.cpp.s
 .PHONY : serialize.cpp.s
 
@@ -347,7 +347,7 @@ utils.o: utils.cpp.o
 # target to build an object file
 utils.cpp.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/fileManager.dir/build.make CMakeFiles/fileManager.dir/utils.cpp.o
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/fileClient.dir/build.make CMakeFiles/fileClient.dir/utils.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pruebaCliente.dir/build.make CMakeFiles/pruebaCliente.dir/utils.cpp.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/fileServer.dir/build.make CMakeFiles/fileServer.dir/utils.cpp.o
 .PHONY : utils.cpp.o
 
@@ -357,7 +357,7 @@ utils.i: utils.cpp.i
 # target to preprocess a source file
 utils.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/fileManager.dir/build.make CMakeFiles/fileManager.dir/utils.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/fileClient.dir/build.make CMakeFiles/fileClient.dir/utils.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pruebaCliente.dir/build.make CMakeFiles/pruebaCliente.dir/utils.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/fileServer.dir/build.make CMakeFiles/fileServer.dir/utils.cpp.i
 .PHONY : utils.cpp.i
 
@@ -367,7 +367,7 @@ utils.s: utils.cpp.s
 # target to generate assembly for a file
 utils.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/fileManager.dir/build.make CMakeFiles/fileManager.dir/utils.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/fileClient.dir/build.make CMakeFiles/fileClient.dir/utils.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pruebaCliente.dir/build.make CMakeFiles/pruebaCliente.dir/utils.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/fileServer.dir/build.make CMakeFiles/fileServer.dir/utils.cpp.s
 .PHONY : utils.cpp.s
 
@@ -379,9 +379,9 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... fileClient"
 	@echo "... fileManager"
 	@echo "... fileServer"
+	@echo "... pruebaCliente"
 	@echo "... fileManagerClient.o"
 	@echo "... fileManagerClient.i"
 	@echo "... fileManagerClient.s"
@@ -391,12 +391,12 @@ help:
 	@echo "... filemanager.o"
 	@echo "... filemanager.i"
 	@echo "... filemanager.s"
-	@echo "... mainFileClient.o"
-	@echo "... mainFileClient.i"
-	@echo "... mainFileClient.s"
 	@echo "... mainFileServer.o"
 	@echo "... mainFileServer.i"
 	@echo "... mainFileServer.s"
+	@echo "... mainPruebaCliente.o"
+	@echo "... mainPruebaCliente.i"
+	@echo "... mainPruebaCliente.s"
 	@echo "... main_fm.o"
 	@echo "... main_fm.i"
 	@echo "... main_fm.s"

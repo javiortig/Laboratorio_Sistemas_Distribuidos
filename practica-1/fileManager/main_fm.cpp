@@ -1,6 +1,11 @@
 #include <iostream>
 #include "fileManagerClient.h"
 
+/*
+    Main homólogo al entregado en el enunciado. Solo cambia la clase FileManager
+    por FileManagerClient, para poder ejecutarlo en remoto.
+*/
+
 int main(int argc,char** argv)
 {
     FileManagerClient *fm=new FileManagerClient();

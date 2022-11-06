@@ -1,0 +1,1 @@
+/usr/bin/c++ -rdynamic CMakeFiles/pruebaCliente.dir/mainPruebaCliente.cpp.o CMakeFiles/pruebaCliente.dir/utils.cpp.o CMakeFiles/pruebaCliente.dir/fileManagerClient.cpp.o CMakeFiles/pruebaCliente.dir/serialize.cpp.o CMakeFiles/pruebaCliente.dir/filemanager.cpp.o -o pruebaCliente  -lpthread 

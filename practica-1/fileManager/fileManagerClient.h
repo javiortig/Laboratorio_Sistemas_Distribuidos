@@ -15,10 +15,9 @@
 #define OP_LIST_DIR 3
 
 //Cambiar estos dos parametros segun la configuracion de la máquina
-// #define PORT 30001  
-// #define SERVER_IP "52.6.23.84"
+#define SERVER_IP "52.6.23.84"
 #define PORT 30001
-#define SERVER_IP "127.0.0.1"
+//#define SERVER_IP "127.0.0.1"
 
 class FileManagerClient{
     private:
@@ -30,10 +29,12 @@ class FileManagerClient{
     public:
     FileManagerClient(char* ip = SERVER_IP, int port = PORT);
     
-    void oldReadFile(std::string& fileName, std::string* &fileContent);
+    //Sobrecargamos readFile y WriteFile para que puedan ser llamados con
+    // char* o std::string.
+    void readFile(std::string& fileName, std::string* &fileContent);
     void readFile(char* fileName, char* &data, unsigned long int & dataLength);
 
-    void oldWriteFile(std::string &fileName, std::string &data, int dataLength);
+    void writeFile(std::string &fileName, std::string &data, int dataLength);
     void writeFile(char *fileName, char *data, unsigned long dataLength);
     vector<string*>* listFiles();
 

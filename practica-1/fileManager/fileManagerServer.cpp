@@ -1,11 +1,13 @@
 #include "fileManagerServer.h"
 
+// Constructor de la clase. Inicia el FileManager.
 FileManagerServer::FileManagerServer(int clientId, string path)
 {
     this->clientId = clientId;
     this->fm = new FileManager(path);
 }
 
+// Destructor. Libera memoria y cierra la conexión si sigue existiendo.
 FileManagerServer::~FileManagerServer()
 {
     delete fm;
@@ -26,21 +28,13 @@ void FileManagerServer::opReadFile()
     recvMSG(clientId, (void **)&fileName, &fileNameSize);
     fileName[fileNameSize] = '\0';
 
-    //std::cout << "Traza: opReadFile1 "
-    //          << "quiero leer: " << fileName << " con fileNameSize: " << fileNameSize << endl;
-
     // lee el fichero:
     fm->readFile(fileName, fileContent, fileLen);
 
-    // std::cout << "Traza: opReadFile2. Leo archivo y contiene:\n"
-    //           << fileContent << endl
-    //           << "con len: " << strlen(fileContent) << endl;
-
-    // lo envia de vuelta al cliente
+    // lo envia de vuelta al cliente.
     sendMSG(clientId, (const void *)fileContent, strlen(fileContent));
 
-    // std::cout << "Traza: opReadFile3. Salgo\n";
-
+    // Libera la memoria restante.
     delete fileName;
     delete fileContent;
 }
@@ -59,8 +53,8 @@ void FileManagerServer::opWriteFile()
 
     //recibe el contenido del fichero
     recvMSG(clientId, (void **)&fileContent, (int *) &fileLen);
-    //TODO: HACE FALTA? fileContent[fileLen] = '\0';
 
+    //Escribe el fichero en local
     fm->writeFile(fileName, fileContent, fileLen);
 
 }
@@ -88,9 +82,8 @@ void FileManagerServer::recvOp()
     if (!typeOp)
         delete[] typeOp;
 
-    //std::cout << "Traza: recvOp1\n";
+    //Recibimos la operación del cliente y gestionamos cada caso
     recvMSG(clientId, (void **)&typeOp, &typeOpSize);
-    //std::cout << "Traza: recvOp2\n";
     switch (typeOp[0])
     {
     case OP_READ_FILE:
