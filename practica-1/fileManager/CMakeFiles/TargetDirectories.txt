@@ -1,5 +1,5 @@
 /home/javiortig/uni/sistemas-distribuidos/practica_1/Pr1/fileManager/CMakeFiles/fileManager.dir
-/home/javiortig/uni/sistemas-distribuidos/practica_1/Pr1/fileManager/CMakeFiles/pruebaCliente.dir
 /home/javiortig/uni/sistemas-distribuidos/practica_1/Pr1/fileManager/CMakeFiles/fileServer.dir
+/home/javiortig/uni/sistemas-distribuidos/practica_1/Pr1/fileManager/CMakeFiles/clientConsole.dir
 /home/javiortig/uni/sistemas-distribuidos/practica_1/Pr1/fileManager/CMakeFiles/edit_cache.dir
 /home/javiortig/uni/sistemas-distribuidos/practica_1/Pr1/fileManager/CMakeFiles/rebuild_cache.dir

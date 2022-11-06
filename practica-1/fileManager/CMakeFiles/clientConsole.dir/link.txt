@@ -1,0 +1,1 @@
+/usr/bin/c++ -rdynamic CMakeFiles/clientConsole.dir/mainConsole.cpp.o CMakeFiles/clientConsole.dir/utils.cpp.o CMakeFiles/clientConsole.dir/fileManagerClient.cpp.o CMakeFiles/clientConsole.dir/filemanager.cpp.o CMakeFiles/clientConsole.dir/serialize.cpp.o CMakeFiles/clientConsole.dir/clientConsole.cpp.o -o clientConsole  -lpthread 

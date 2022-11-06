@@ -27,7 +27,7 @@ class FileManagerClient{
     
 
     public:
-    FileManagerClient(char* ip = SERVER_IP, int port = PORT);
+    FileManagerClient(const char* ip = SERVER_IP, int port = PORT);
     
     //Sobrecargamos readFile y WriteFile para que puedan ser llamados con
     // char* o std::string.

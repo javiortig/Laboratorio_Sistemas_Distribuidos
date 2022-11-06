@@ -1,6 +1,6 @@
 #include "fileManagerClient.h"
 
-FileManagerClient::FileManagerClient(char * ip, int port)
+FileManagerClient::FileManagerClient(const char * ip, int port)
 {
     this->ip = (char*)malloc(strlen(ip) * sizeof(char));
     strcpy(this->ip, ip);

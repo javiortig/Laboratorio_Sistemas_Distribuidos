@@ -64,8 +64,8 @@ CMAKE_BINARY_DIR = /home/javiortig/uni/sistemas-distribuidos/practica_1/Pr1/file
 
 # The main recursive "all" target.
 all: CMakeFiles/fileManager.dir/all
-all: CMakeFiles/pruebaCliente.dir/all
 all: CMakeFiles/fileServer.dir/all
+all: CMakeFiles/clientConsole.dir/all
 .PHONY : all
 
 # The main recursive "preinstall" target.
@@ -74,8 +74,8 @@ preinstall:
 
 # The main recursive "clean" target.
 clean: CMakeFiles/fileManager.dir/clean
-clean: CMakeFiles/pruebaCliente.dir/clean
 clean: CMakeFiles/fileServer.dir/clean
+clean: CMakeFiles/clientConsole.dir/clean
 .PHONY : clean
 
 #=============================================================================
@@ -85,7 +85,7 @@ clean: CMakeFiles/fileServer.dir/clean
 CMakeFiles/fileManager.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/fileManager.dir/build.make CMakeFiles/fileManager.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/fileManager.dir/build.make CMakeFiles/fileManager.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/javiortig/uni/sistemas-distribuidos/practica_1/Pr1/fileManager/CMakeFiles --progress-num=1,2,3,4,5,6 "Built target fileManager"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/javiortig/uni/sistemas-distribuidos/practica_1/Pr1/fileManager/CMakeFiles --progress-num=8,9,10,11,12,13 "Built target fileManager"
 .PHONY : CMakeFiles/fileManager.dir/all
 
 # Build rule for subdir invocation for target.
@@ -105,39 +105,13 @@ CMakeFiles/fileManager.dir/clean:
 .PHONY : CMakeFiles/fileManager.dir/clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/pruebaCliente.dir
-
-# All Build rule for target.
-CMakeFiles/pruebaCliente.dir/all:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pruebaCliente.dir/build.make CMakeFiles/pruebaCliente.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pruebaCliente.dir/build.make CMakeFiles/pruebaCliente.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/javiortig/uni/sistemas-distribuidos/practica_1/Pr1/fileManager/CMakeFiles --progress-num=14,15,16,17,18,19 "Built target pruebaCliente"
-.PHONY : CMakeFiles/pruebaCliente.dir/all
-
-# Build rule for subdir invocation for target.
-CMakeFiles/pruebaCliente.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/javiortig/uni/sistemas-distribuidos/practica_1/Pr1/fileManager/CMakeFiles 6
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/pruebaCliente.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/javiortig/uni/sistemas-distribuidos/practica_1/Pr1/fileManager/CMakeFiles 0
-.PHONY : CMakeFiles/pruebaCliente.dir/rule
-
-# Convenience name for target.
-pruebaCliente: CMakeFiles/pruebaCliente.dir/rule
-.PHONY : pruebaCliente
-
-# clean rule for target.
-CMakeFiles/pruebaCliente.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pruebaCliente.dir/build.make CMakeFiles/pruebaCliente.dir/clean
-.PHONY : CMakeFiles/pruebaCliente.dir/clean
-
-#=============================================================================
 # Target rules for target CMakeFiles/fileServer.dir
 
 # All Build rule for target.
 CMakeFiles/fileServer.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/fileServer.dir/build.make CMakeFiles/fileServer.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/fileServer.dir/build.make CMakeFiles/fileServer.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/javiortig/uni/sistemas-distribuidos/practica_1/Pr1/fileManager/CMakeFiles --progress-num=7,8,9,10,11,12,13 "Built target fileServer"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/javiortig/uni/sistemas-distribuidos/practica_1/Pr1/fileManager/CMakeFiles --progress-num=14,15,16,17,18,19,20 "Built target fileServer"
 .PHONY : CMakeFiles/fileServer.dir/all
 
 # Build rule for subdir invocation for target.
@@ -155,6 +129,32 @@ fileServer: CMakeFiles/fileServer.dir/rule
 CMakeFiles/fileServer.dir/clean:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/fileServer.dir/build.make CMakeFiles/fileServer.dir/clean
 .PHONY : CMakeFiles/fileServer.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/clientConsole.dir
+
+# All Build rule for target.
+CMakeFiles/clientConsole.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/clientConsole.dir/build.make CMakeFiles/clientConsole.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/clientConsole.dir/build.make CMakeFiles/clientConsole.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/javiortig/uni/sistemas-distribuidos/practica_1/Pr1/fileManager/CMakeFiles --progress-num=1,2,3,4,5,6,7 "Built target clientConsole"
+.PHONY : CMakeFiles/clientConsole.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/clientConsole.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/javiortig/uni/sistemas-distribuidos/practica_1/Pr1/fileManager/CMakeFiles 7
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/clientConsole.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/javiortig/uni/sistemas-distribuidos/practica_1/Pr1/fileManager/CMakeFiles 0
+.PHONY : CMakeFiles/clientConsole.dir/rule
+
+# Convenience name for target.
+clientConsole: CMakeFiles/clientConsole.dir/rule
+.PHONY : clientConsole
+
+# clean rule for target.
+CMakeFiles/clientConsole.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/clientConsole.dir/build.make CMakeFiles/clientConsole.dir/clean
+.PHONY : CMakeFiles/clientConsole.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.
