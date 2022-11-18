@@ -22,7 +22,7 @@ void multMatrix_imp::recvOp() {
 		recvMSG(clientId, (void**) &typeOp, &typeOpSize);
 		switch (typeOp[0]) {
 			case OP_END:
-				cout << "FIN COMUNICACION" << endl;
+				std::cout << "FIN COMUNICACION" << std::endl;
 				break;
 			case OP_IDENTIDAD:
 				recvIdentity();
@@ -40,7 +40,7 @@ void multMatrix_imp::recvOp() {
 				recvWriteMatrix();
 				break;
 			default:
-				cout << "ERROR Operacion: " << typeOp[0] << " no valida" << endl;
+				std::cout << "ERROR Operacion: " << typeOp[0] << " no valida" << std::endl;
 				break;
 		}
 	} while(typeOp[0] != OP_END);
@@ -69,7 +69,7 @@ void multMatrix_imp::recvIdentity() {
 	int* identArr = serializeMatrix(identMat);
 	int length = identMat->rows * identMat->cols + 2;
 
-	sendMSG(clientId, (void**) &identArr, length);
+	sendMSG(clientId, (const void*) &identArr, length);
 
 }
 
@@ -94,7 +94,7 @@ void multMatrix_imp::recvRandMatrix() {
 	int* randArr = serializeMatrix(randMat);
 	int length = randMat->rows * randMat->cols + 2;
 
-	sendMSG(clientId, (void**) &randArr, length);
+	sendMSG(clientId, (const void*) &randArr, length);
 }
 
 void multMatrix_imp::recvReadMatrix() {
@@ -104,13 +104,13 @@ void multMatrix_imp::recvReadMatrix() {
 	
 	recvMSG(clientId, (void**) &recvBuffFileName, &recvBuffSize);
 	
-	string* fileName = new string(recvBuffFileName);
-	matrix_t* fileContent = mult->readMatrix(fileName);
+	std::string* fileName = new std::string(recvBuffFileName);
+	matrix_t* fileContent = mult->readMatrix(fileName->c_str());
 	int* matrix = serializeMatrix(fileContent);
 
 	int length = fileContent->rows * fileContent->cols + 2;
 
-	sendMSG(clientId, (void**) &matrix, length);
+	sendMSG(clientId, (const void*) &matrix, length);
 	
 	delete fileName;
 	delete fileContent;
@@ -120,7 +120,7 @@ void multMatrix_imp::recvReadMatrix() {
 
 void multMatrix_imp::recvMultMatrix() {
 	// Multiplica dos matrices
-	byte* recvBuff = nullptr;
+	int* recvBuff = nullptr;
     int recvBufSize = 0;
 
     recvMSG(clientId, (void**)&recvBuff, &recvBufSize);
@@ -148,16 +148,17 @@ void multMatrix_imp::recvWriteMatrix() {
 	// Escribe matriz a archivo
 	// Lee matriz de un archivo
 	char* recvBuffFileName = nullptr;
+	int* recvBuff = nullptr;
 	int recvBuffSize = 0;
 	
 	recvMSG(clientId, (void**) &recvBuffFileName, &recvBuffSize);
 	
-	string* fileName = new string(recvBuffFileName);
+	std::string* fileName = new std::string(recvBuffFileName);
 	delete[] recvBuff;
 
 	recvMSG(clientId, (void**) &recvBuff, &recvBuffSize);
 	matrix_t* matrix = deserializeMatrix(recvBuff);
-	mult->writeMatrix(matrix, fileName);
+	mult->writeMatrix(matrix, fileName->c_str());
 
 }
 

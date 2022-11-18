@@ -78,7 +78,7 @@ multMatrix_stub::~multMatrix_stub() {
 	closeConnection(serverId);
 }
 
-multMatrix_stub::matrix_t *createIdentity(int rows, int cols) {
+matrix_t* multMatrix_stub::createIdentity(int rows, int cols) {
 	int typeOp = OP_IDENTIDAD;
 	sendMSG(serverId, (const void*) &typeOp, sizeof(int));
 
@@ -99,7 +99,7 @@ multMatrix_stub::matrix_t *createIdentity(int rows, int cols) {
 	
 }
 
-multMatrix_stub::matrix_t *createRandMatrix(int rows, int cols) {
+matrix_t* multMatrix_stub::createRandMatrix(int rows, int cols) {
 	int typeOp = OP_RAND;
 	sendMSG(serverId, (const void*) &typeOp, sizeof(int));
 

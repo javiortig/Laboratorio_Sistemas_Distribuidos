@@ -2,6 +2,8 @@
 
 #include "multmatrix.h"
 #include "utils.h"
+#include <string>
+#include <string.h>
 
 class multMatrix_imp
 {

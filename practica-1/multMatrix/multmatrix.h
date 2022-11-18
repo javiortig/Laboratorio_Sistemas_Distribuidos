@@ -9,12 +9,6 @@
 #include <unistd.h>
 #include "utils.h"
 
-typedef struct matrix_t {
-    int rows;
-    int cols;
-    int* data;
-} matrix_t;
-
 class multMatrix
 {
 public:

@@ -7,7 +7,7 @@
 #define PORT 60001
 
 void threadClient(int clientId) {
-    multMatrix_imp* calc = multMatrix_imp(clientId);
+    multMatrix_imp* calc = new multMatrix_imp(clientId);
     calc->recvOp();
     delete calc;
 }

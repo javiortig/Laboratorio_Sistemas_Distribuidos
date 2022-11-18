@@ -22,6 +22,13 @@
 #define SYNC     2
 #define END      3
 
+
+typedef struct matrix_t {
+    int rows;
+    int cols;
+    int* data;
+} matrix_t;
+
 typedef struct dataPacket_t
 {
     int dataSize;

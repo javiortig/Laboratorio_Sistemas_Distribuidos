@@ -1,6 +1,7 @@
 #pragma once
 
 #include "serialize.h"
+#include "utils.h"
 
 #define OP_END 0
 #define OP_IDENTIDAD 1
