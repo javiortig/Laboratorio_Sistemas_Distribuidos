@@ -1,12 +1,19 @@
-#ifndef MULTMATRIX_H
-#define MULTMATRIX_H
+#pragma once
 
-typedef struct matrix_t
-{
+#include <stdio.h>
+#include <stdlib.h>
+#include <iostream>
+#include <string>
+#include <cstring>
+#include <sys/types.h>
+#include <unistd.h>
+#include "utils.h"
+
+typedef struct matrix_t {
     int rows;
     int cols;
     int* data;
-}matrix_t;
+} matrix_t;
 
 class multMatrix
 {
@@ -20,4 +27,4 @@ public:
     matrix_t *createRandMatrix(int rows, int cols);
 };
 
-#endif // MULTMATRIX_H
+

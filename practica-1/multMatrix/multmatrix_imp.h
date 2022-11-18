@@ -1,13 +1,7 @@
 #pragma once
 
 #include "multmatrix.h"
-
-typedef struct matrix_t
-{
-    int rows;
-    int cols;
-    int* data;
-}matrix_t;
+#include "utils.h"
 
 class multMatrix_imp
 {

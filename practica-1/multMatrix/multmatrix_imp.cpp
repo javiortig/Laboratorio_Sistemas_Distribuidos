@@ -1,7 +1,7 @@
 #include "multmatrix_imp.h"
 #include "multmatrix_stub.h"
 #include "serialize.h"
-#include "utils.h"
+//#include "utils.h"
 
 multMatrix_imp::multMatrix_imp(int clientId) {
 	this->clientId = clientId;
@@ -69,7 +69,7 @@ void multMatrix_imp::recvIdentity() {
 	int* identArr = serializeMatrix(identMat);
 	int length = identMat->rows * identMat->cols + 2;
 
-	sendMSG(clientId, (void**) &identArr, &length);
+	sendMSG(clientId, (void**) &identArr, length);
 
 }
 
@@ -94,7 +94,7 @@ void multMatrix_imp::recvRandMatrix() {
 	int* randArr = serializeMatrix(randMat);
 	int length = randMat->rows * randMat->cols + 2;
 
-	sendMSG(clientId, (void**) &randArr, &length);
+	sendMSG(clientId, (void**) &randArr, length);
 }
 
 void multMatrix_imp::recvReadMatrix() {
@@ -110,7 +110,7 @@ void multMatrix_imp::recvReadMatrix() {
 
 	int length = fileContent->rows * fileContent->cols + 2;
 
-	sendMSG(clientId, (void**) &matrix, &length);
+	sendMSG(clientId, (void**) &matrix, length);
 	
 	delete fileName;
 	delete fileContent;
@@ -155,7 +155,7 @@ void multMatrix_imp::recvWriteMatrix() {
 	string* fileName = new string(recvBuffFileName);
 	delete[] recvBuff;
 
-	recvMSG(clientId, (void**) &recvBuff, recvBuffSize);
+	recvMSG(clientId, (void**) &recvBuff, &recvBuffSize);
 	matrix_t* matrix = deserializeMatrix(recvBuff);
 	mult->writeMatrix(matrix, fileName);
 

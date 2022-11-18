@@ -2,8 +2,10 @@
 #include "serialize.h"
 #include "utils.h"
 
-#define PORT        55555
-#define SERVER_IP   "52.73.125.19"
+#define PORT        60001
+#define SERVER_IP   "44.197.149.124"
+
+using namespace std;
 
 multMatrix_stub::multMatrix_stub() {
 	serverId = initClient((char*)SERVER_IP, PORT);
@@ -14,7 +16,9 @@ matrix_t* multMatrix_stub::readMatrix(const char* fileName) {
 	int typeOp = OP_READ;
 	sendMSG(serverId, (const void*) &typeOp, sizeof(int));
 	
-	sendMSG(serverId, (const void*) fileName->c_str(), fileName->length());
+	int length = strlen(fileName);
+	
+	sendMSG(serverId, (const void*) fileName, length);
 
 	int* recvBuff = nullptr;
 	int recvBuffSize = 0;
@@ -29,48 +33,52 @@ matrix_t* multMatrix_stub::readMatrix(const char* fileName) {
 	
 }
 
-matrix_t* multmatrix_stub::multMatrices(matrix_t* m1, matrix_t *m2) {
+matrix_t* multMatrix_stub::multMatrices(matrix_t* m1, matrix_t *m2) {
 	int typeOp = OP_MULT;
 	sendMSG(serverId, (const void*) &typeOp, sizeof(int));
 	
-	matrix_t* v1s = serializeMatrix(v1);
-	matrix_t* v2s = serializeMatrix(v2);
+	int* m1s = serializeMatrix(m1);
+	int* m2s = serializeMatrix(m2);
 
-	int length1 = v1s->cols * v1s->rows + 2;
-	int length2 = v2s->cols * v2s->rows + 2;
+	int length1 = m1->cols * m1->rows + 2;
+	int length2 = m2->cols * m2->rows + 2;
 	
-	sendMSG(serverId, (const void*) &v1, length1);
-	sendMSG(serverId, (const void*) &v2, length2);
+	sendMSG(serverId, (const void*) &m1s, length1);
+	sendMSG(serverId, (const void*) &m2s, length2);
 
 	int* recvBuff = nullptr;
 	int recvBuffSize = 0;
 	
 	recvMSG(serverId, (void**) &recvBuff, &recvBuffSize);
-	// Deserialize
-	return sol;
+	// Recibo la matrix serializada y la deserializo y la devuelvo
+	matrix_t* matrixSol = deserializeMatrix(recvBuff);
+	delete[] recvBuff;
+	return matrixSol;
 }	
 	
 
 
-void multmatrix_stub::writeMatrix(matrix_t* m, const char *fileName) {
+void multMatrix_stub::writeMatrix(matrix_t* m, const char *fileName) {
 	int typeOp = OP_WRITE;
 	sendMSG(serverId, (const void*) &typeOp, sizeof(int));
 	
-	sendMSG(serverId, (const void*) fileName->c_str(), fileName->length());
+	int length = strlen(fileName);
+	
+	sendMSG(serverId, (const void*) fileName, length);
 
 	// Ahora mandamos la matriz
 	int* mSerialized = serializeMatrix(m);
-	int length  = m->cols * m->rows + 2;
-	sendMSG(serverId, (const void*) &mSerialized, &length);
+	int length2  = m->cols * m->rows + 2;
+	sendMSG(serverId, (const void*) &mSerialized, length2);
 }
 
-multmatrix_stub::~multMatrix_stub() {
+multMatrix_stub::~multMatrix_stub() {
 	int typeOp = OP_END;
-    sendMSG(serverId, (const void*)&typeOp, sizeof(int));
+    sendMSG(serverId, (const void*) &typeOp, sizeof(int));
 	closeConnection(serverId);
 }
 
-multmatrix_stub::matrix_t *createIdentity(int rows, int cols) {
+multMatrix_stub::matrix_t *createIdentity(int rows, int cols) {
 	int typeOp = OP_IDENTIDAD;
 	sendMSG(serverId, (const void*) &typeOp, sizeof(int));
 
@@ -91,7 +99,7 @@ multmatrix_stub::matrix_t *createIdentity(int rows, int cols) {
 	
 }
 
-multmatrix_stub::matrix_t *createRandMatrix(int rows, int cols) {
+multMatrix_stub::matrix_t *createRandMatrix(int rows, int cols) {
 	int typeOp = OP_RAND;
 	sendMSG(serverId, (const void*) &typeOp, sizeof(int));
 

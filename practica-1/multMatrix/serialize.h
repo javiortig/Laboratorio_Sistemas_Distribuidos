@@ -1,11 +1,11 @@
 #pragma once
-#include "multmatrix.h"
 
 #include <string.h>
 #include <iostream>
+#include "multmatrix.h"
 
 // Convierte una matrix en char*
-int* serializeMatrix(matrix_t * m);
+int* serializeMatrix(matrix_t* m);
 
 // Convierte un char* en una matrix
-matrix_t* deserializeMatrix(int*s);
+matrix_t* deserializeMatrix(int* arr);
