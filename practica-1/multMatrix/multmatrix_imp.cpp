@@ -1,7 +1,6 @@
 #include "multmatrix_imp.h"
 #include "multmatrix_stub.h"
 #include "serialize.h"
-//#include "utils.h"
 
 multMatrix_imp::multMatrix_imp(int clientId) {
 	this->clientId = clientId;
@@ -49,15 +48,11 @@ void multMatrix_imp::recvOp() {
 
 void multMatrix_imp::recvIdentity() {
 
-	// Crea matriz identidad
-	// Recibe rows cols 
-	// Llama a funcion main
-	// Manda matriz serializada
 	int* recvBuff = nullptr;
     int recvBufSize = 0;
+	
     int rows = 0;
     int cols = 0;
-    int res = 0;
 
     recvMSG(clientId, (void**)&recvBuff, &recvBufSize);
     rows = ((int*)recvBuff)[0]; delete[] recvBuff;
@@ -66,23 +61,26 @@ void multMatrix_imp::recvIdentity() {
     cols = ((int*)recvBuff)[0]; delete[] recvBuff;
 
 	matrix_t* identMat = mult->createIdentity(rows, cols);
-	int* identArr = serializeMatrix(identMat);
-	int length = identMat->rows * identMat->cols + 2;
+	
+	std::vector<int>* identVec = serializeMatrix(identMat);
+	int length = identVec->size();
 
-	sendMSG(clientId, (const void*) &identArr, length);
-
+	sendMSG(clientId, (const void*) identVec->data(), length*sizeof(int));
+	
+	delete[] recvBuff;
+	// borrar la matriz me da segmentation fault, quizas este siendo usada todavia
+	//delete[] identMat->data;
+    //delete[] identMat;
+	//identVec->clear();
 }
 
 void multMatrix_imp::recvRandMatrix() {
-	// Crea matriz aleatoria
-	// Recibe rows cols 
-	// Llama a funcion main
-	// Manda matriz serializada
+	
 	int* recvBuff = nullptr;
     int recvBufSize = 0;
+	
     int rows = 0;
     int cols = 0;
-    int res = 0;
 
     recvMSG(clientId, (void**)&recvBuff, &recvBufSize);
     rows = ((int*)recvBuff)[0]; delete[] recvBuff;
@@ -91,97 +89,102 @@ void multMatrix_imp::recvRandMatrix() {
     cols = ((int*)recvBuff)[0]; delete[] recvBuff;
 
 	matrix_t* randMat = mult->createRandMatrix(rows, cols);
-	int* randArr = serializeMatrix(randMat);
-	int length = randMat->rows * randMat->cols + 2;
+	
+	std::vector<int>* randVec = serializeMatrix(randMat);
+	int length = randVec->size();
+	
+	sendMSG(clientId, (const void*) randVec->data(), length*sizeof(int));
 
-	sendMSG(clientId, (const void*) &randArr, length);
+	delete[] recvBuff;
+	//delete[] randMat->data;
+    //delete[] randMat;
+	//randVec->clear();
 }
 
 void multMatrix_imp::recvReadMatrix() {
-	// Lee matriz de un archivo
 	char* recvBuffFileName = nullptr;
 	int recvBuffSize = 0;
 	
 	recvMSG(clientId, (void**) &recvBuffFileName, &recvBuffSize);
-	
-	std::string* fileName = new std::string(recvBuffFileName);
-	matrix_t* fileContent = mult->readMatrix(fileName->c_str());
-	int* matrix = serializeMatrix(fileContent);
+	recvBuffFileName[recvBuffSize] = '\0';
 
-	int length = fileContent->rows * fileContent->cols + 2;
-
-	sendMSG(clientId, (const void*) &matrix, length);
+	matrix_t* fileContent = mult->readMatrix(recvBuffFileName);
 	
-	delete fileName;
-	delete fileContent;
+	std::vector<int>* vecFile = serializeMatrix(fileContent);
+	int length = vecFile->size();
+	
+	sendMSG(clientId, (const void*) vecFile->data(), length*sizeof(int));
+	
 	delete[] recvBuffFileName;
+	//delete[] fileContent->data;
+	//delete[] fileContent;
+	//vecFile->clear();
 }
 
 
 void multMatrix_imp::recvMultMatrix() {
-	// Multiplica dos matrices
 	int* recvBuff = nullptr;
-    int recvBufSize = 0;
+    int recvBuffSize = 0;
 
-    recvMSG(clientId, (void**)&recvBuff, &recvBufSize);
-	matrix_t* matrix1 = deserializeMatrix(recvBuff);
-	// Deserializar
-    delete[] recvBuff;
-
-    recvMSG(clientId, (void**)&recvBuff, &recvBufSize);
-    // Deserializar
-	matrix_t* matrix2 = deserializeMatrix(recvBuff);
-	delete[] recvBuff;
-
-    matrix_t* res = mult->multMatrices(matrix1, matrix2);
-	// Serializar
-	int* resArr = serializeMatrix(res);
-	int length = res->cols * res->rows + 2;
-
-    sendMSG(clientId, (const void*)&resArr, length);
-    delete matrix1;
-    delete matrix2;
+	recvMSG(clientId, (void**)&recvBuff, &recvBuffSize);
+	std::vector<int>* vec1 = new std::vector<int>();
+	vec1->reserve(recvBuffSize);
+	vec1->resize(recvBuffSize);
+	memcpy(vec1->data(), recvBuff, recvBuffSize);
+	matrix_t* m1 = deserializeMatrix(vec1);
 	
+	delete[] recvBuff;
+	recvBuffSize = 0;
+	
+	recvMSG(clientId, (void**)&recvBuff, &recvBuffSize);
+	std::vector<int>* vec2 = new std::vector<int>();
+	vec2->reserve(recvBuffSize);
+	vec2->resize(recvBuffSize);
+	memcpy(vec2->data(), recvBuff, recvBuffSize);
+	matrix_t* m2 = deserializeMatrix(vec2);
+
+    matrix_t* matRes = mult->multMatrices(m1, m2);
+	
+	std::vector<int>* vecRes = serializeMatrix(matRes);
+	int length = vecRes->size();
+    sendMSG(clientId, (const void*)vecRes->data(), length*sizeof(int));
+	
+	delete[] recvBuff;
+	//vec1->clear();
+	//vec2->clear();
+	//vecRes->clear();
+	//delete[] m1->data;
+    //delete[] m1;
+	//delete[] m2->data;
+    //delete[] m2;
+	//delete[] matRes->data;
+    //delete[] matRes;
 }
 
 void multMatrix_imp::recvWriteMatrix() {
-	// Escribe matriz a archivo
-	// Lee matriz de un archivo
 	char* recvBuffFileName = nullptr;
 	int* recvBuff = nullptr;
 	int recvBuffSize = 0;
-	
+
 	recvMSG(clientId, (void**) &recvBuffFileName, &recvBuffSize);
-	
-	std::string* fileName = new std::string(recvBuffFileName);
+	recvBuffFileName[recvBuffSize] = '\0';
+
 	delete[] recvBuff;
-
-	recvMSG(clientId, (void**) &recvBuff, &recvBuffSize);
-	matrix_t* matrix = deserializeMatrix(recvBuff);
-	mult->writeMatrix(matrix, fileName->c_str());
-
+    recvBuffSize = 0;
+	
+    recvMSG(clientId, (void**)&recvBuff, &recvBuffSize);
+	
+	std::vector<int>* vec = new std::vector<int>();
+	vec->reserve(recvBuffSize);
+	vec->resize(recvBuffSize);
+	memcpy(vec->data(), recvBuff, recvBuffSize);
+	matrix_t* mat = deserializeMatrix(vec);
+	
+	mult->writeMatrix(mat, recvBuffFileName);
+	
+	delete[] recvBuffFileName;
+	delete[] recvBuff;
+	//vec->clear();
+	//delete[] mat->data;
+	//delete[] mat;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

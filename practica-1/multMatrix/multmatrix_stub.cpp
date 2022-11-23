@@ -17,43 +17,52 @@ matrix_t* multMatrix_stub::readMatrix(const char* fileName) {
 	sendMSG(serverId, (const void*) &typeOp, sizeof(int));
 	
 	int length = strlen(fileName);
-	
 	sendMSG(serverId, (const void*) fileName, length);
 
 	int* recvBuff = nullptr;
 	int recvBuffSize = 0;
 	
-	recvMSG(serverId, (void**) &recvBuff, &recvBuffSize);
-
-	matrix_t* matrix = deserializeMatrix(recvBuff);
+    recvMSG(serverId, (void**)&recvBuff, &recvBuffSize);
+	std::vector<int>* vec = new std::vector<int>();
+	vec->reserve(recvBuffSize);
+	vec->resize(recvBuffSize);
+	memcpy(vec->data(), recvBuff, recvBuffSize);
+	matrix_t* mat = deserializeMatrix(vec);
+	
 	delete[] recvBuff;
-	return matrix;
+	//vec->clear();
 	
-	// Aqui hay que deserializar y obtener la matriz
-	
+	return mat;
 }
 
 matrix_t* multMatrix_stub::multMatrices(matrix_t* m1, matrix_t *m2) {
 	int typeOp = OP_MULT;
 	sendMSG(serverId, (const void*) &typeOp, sizeof(int));
 	
-	int* m1s = serializeMatrix(m1);
-	int* m2s = serializeMatrix(m2);
-
-	int length1 = m1->cols * m1->rows + 2;
-	int length2 = m2->cols * m2->rows + 2;
-	
-	sendMSG(serverId, (const void*) &m1s, length1);
-	sendMSG(serverId, (const void*) &m2s, length2);
-
 	int* recvBuff = nullptr;
 	int recvBuffSize = 0;
 	
-	recvMSG(serverId, (void**) &recvBuff, &recvBuffSize);
-	// Recibo la matrix serializada y la deserializo y la devuelvo
-	matrix_t* matrixSol = deserializeMatrix(recvBuff);
+	vector<int>* v1 = serializeMatrix(m1);
+	int length1 = v1->size();
+	sendMSG(serverId, (const void*) v1->data(), length1*sizeof(int));
+	
+	vector<int>* v2 = serializeMatrix(m2);
+	int length2 = v2->size();
+	sendMSG(serverId, (const void*) v2->data(), length2*sizeof(int));
+
+    recvMSG(serverId, (void**)&recvBuff, &recvBuffSize);
+	std::vector<int>* v3 = new std::vector<int>();
+	v3->reserve(recvBuffSize);
+	v3->resize(recvBuffSize);
+	memcpy(v3->data(), recvBuff, recvBuffSize);
+	matrix_t* matRes = deserializeMatrix(v3);
+	
 	delete[] recvBuff;
-	return matrixSol;
+	//v1->clear();
+	//v2->clear();
+	//v3->clear();
+	
+	return matRes;
 }	
 	
 
@@ -66,10 +75,11 @@ void multMatrix_stub::writeMatrix(matrix_t* m, const char *fileName) {
 	
 	sendMSG(serverId, (const void*) fileName, length);
 
-	// Ahora mandamos la matriz
-	int* mSerialized = serializeMatrix(m);
-	int length2  = m->cols * m->rows + 2;
-	sendMSG(serverId, (const void*) &mSerialized, length2);
+	vector<int>* vec = serializeMatrix(m);
+	int length2 = vec->size();
+	sendMSG(serverId, (const void*) vec->data(), length2*sizeof(int));
+	
+	//vec->clear();
 }
 
 multMatrix_stub::~multMatrix_stub() {
@@ -84,19 +94,21 @@ matrix_t* multMatrix_stub::createIdentity(int rows, int cols) {
 
 	sendMSG(serverId, (const void*) &rows, sizeof(int));
 	sendMSG(serverId, (const void*) &cols, sizeof(int));
-
+	
 	int* recvBuff = nullptr;
     int recvBuffSize = 0;
-
-    recvMSG(serverId, (void**)&recvBuff, &recvBuffSize);
 	
-	matrix_t* identMat = deserializeMatrix(recvBuff);
-	return identMat;
-	// Mandamos rows y cols
-	// Recibes la matriz serializada
-	// Deserializa
-	// return
+	recvMSG(serverId, (void**)&recvBuff, &recvBuffSize);
+	std::vector<int>* vec = new std::vector<int>();
+	vec->reserve(recvBuffSize);
+	vec->resize(recvBuffSize);
+	memcpy(vec->data(), recvBuff, recvBuffSize);
+	matrix_t* idMat = deserializeMatrix(vec);
 	
+	delete[] recvBuff;
+	//vec->clear();
+	
+	return idMat;
 }
 
 matrix_t* multMatrix_stub::createRandMatrix(int rows, int cols) {
@@ -108,13 +120,16 @@ matrix_t* multMatrix_stub::createRandMatrix(int rows, int cols) {
 
 	int* recvBuff = nullptr;
     int recvBuffSize = 0;
-
-    recvMSG(serverId, (void**)&recvBuff, &recvBuffSize);
 	
-	matrix_t* randMat = deserializeMatrix(recvBuff);
+    recvMSG(serverId, (void**)&recvBuff, &recvBuffSize);
+	std::vector<int>* vec = new std::vector<int>();
+	vec->reserve(recvBuffSize);
+	vec->resize(recvBuffSize);
+	memcpy(vec->data(), recvBuff, recvBuffSize);
+	matrix_t* randMat = deserializeMatrix(vec);
+	
+	delete[] recvBuff;
+	//vec->clear();
+	
 	return randMat;
-	// Mandamos rows y cols
-	// Recibes la matriz serializada
-	// Deserializa
-	// return
 }

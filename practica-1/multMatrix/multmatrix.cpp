@@ -1,6 +1,5 @@
 #include "multmatrix.h"
 
-
 /**
  * @brief multMatrix::multMatrix Constructor de la clase multMatrix.
  * No tiene parámetros y sólo inicializa el generador de números aleatorios
@@ -128,7 +127,6 @@ matrix_t* multMatrix::createIdentity(int rows, int cols)
     return m;
 }
 
-
 /**
  * @brief multMatrix::~multMatrix Destructor de la clase, no tiene nada ahora mismo
  */
@@ -136,4 +134,3 @@ multMatrix::~multMatrix()
 {
     //empty destructor
 }
-

@@ -1,36 +1,23 @@
 #include "serialize.h"
 
-//serializa con filas columnas data
-int* serializeMatrix(matrix_t * m){
-    int *result = nullptr;
-    int len = m->cols * m->rows;
-
-    result = (int*) malloc(sizeof(int) * (len + 2));
-    result[0] = m->rows;
-    result[1] = m->cols;
-    for (int i = 0; i < len; i++)
-    {
-        result[i + 2] = m->data[i];
-    }
-    
-    return result;
+matrix_t* deserializeMatrix(std::vector<int> *v)
+{
+    matrix_t *res = new matrix_t[1];
+    res->rows = v->at(0);
+    res->cols = v->at(1);
+    res->data = new int[v->size()-2];
+    memcpy(res->data, (v->data()+2), sizeof(int)*(v->size()-2));
+    return res;
 }
 
-matrix_t* deserializeMatrix(int* arr){
-    matrix_t *result = new matrix_t();
-    int len = -1;
-
-    result->rows = arr[0];
-    result->cols = arr[1];
-
-    len = result->rows * result->cols;
-
-    result->data = (int*) malloc(sizeof(int) * len);
-
-    for (int i = 0; i < len; i++)
+std::vector<int>* serializeMatrix(matrix_t* m)
+{
+    std::vector<int> *vres = new std::vector<int>();
+    vres->push_back(m->rows);
+    vres->push_back(m->cols);
+    for (int i = 0; i < vres->at(0)*vres->at(1); i++)
     {
-        result->data[i] = arr[i + 2];
+        vres->push_back(m->data[i]);
     }
-
-    return result;
+    return vres;
 }
