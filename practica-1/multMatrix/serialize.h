@@ -1,3 +1,4 @@
+// Javier Orti Jose Delgado
 #pragma once
 
 #include <iostream>
@@ -8,8 +9,8 @@
 #include <cstring>
 #include "utils.h"
 
-// Convierte una matrix en char*
-matrix_t* deserializeMatrix(std::vector<int> *v);
+// Convierte un vector en matrix_t*
+matrix_t* deserializeMatrix(std::vector<int> *vec);
 
-// Convierte un char* en una matrix
-std::vector<int>* serializeMatrix(matrix_t* m);
+// Convierte una matriz en vector<int>*
+std::vector<int>* serializeMatrix(matrix_t* mat);
