@@ -1,0 +1,26 @@
+apiVersion: v1
+kind: Deployment
+metadata:
+    name: file-manager
+    namespace: default
+specs:
+    replicas: 1
+    selector:
+        matchLabels:
+            app: file-manager
+    template:
+        metadata:
+            labels:
+                app: file-manager
+        spec:
+            containers:
+                name: file-manager
+                image: docker.io/hypergalois/ubuntu_file_manager:latest
+                volumeMounts:
+                    mounPath: /file_manager
+                    name: directorio-file-manager
+                volumes:
+                    name: directorio-file-manager
+                    hostPath:
+                        path: /home/ubuntu/compartido
+                        type: Directory
