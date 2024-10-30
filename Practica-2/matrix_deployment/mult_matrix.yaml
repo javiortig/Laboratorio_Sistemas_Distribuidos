@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: multmatrix
+  namespace: default
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: multmatrix
+  template:
+    metadata:
+      labels:
+        app: multmatrix
+    spec:
+      nodeSelector:
+        node-role: slave2
+      containers:
+        - name: multmatrix
+          image: docker.io/javiortig/multmatrix:3
+          ports:
+            - containerPort: 30002

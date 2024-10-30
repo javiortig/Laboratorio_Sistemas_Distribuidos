@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: filemanager
+  namespace: default
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: filemanager
+  template:
+    metadata:
+      labels:
+        app: filemanager
+    spec:
+      nodeSelector:
+        node-role: slave1
+      containers:
+        - name: filemanager
+          image: docker.io/javiortig/filemanager:18
+          ports:
+            - containerPort: 30001
