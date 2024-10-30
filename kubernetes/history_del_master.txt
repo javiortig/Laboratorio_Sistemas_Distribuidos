@@ -1,0 +1,633 @@
+ 1  ls
+    2  code .
+    3  gedit
+    4  sudo apt install code
+    5  sudo snap install code
+    6  ls
+    7  cd ..
+    8  ls
+    9  cd ubuntu/
+   10  mkdir ej0
+   11  cd ej0/
+   12  ls
+   13  uzip Ej_0LibUtils.zip
+   14  xzip Ej_0LibUtils.zip
+   15  unzip Ej_0LibUtils.zip
+   16  ls
+   17  cd Ej_0LibUtils/
+   18  ls
+   19  code .
+   20  sudo snap install code
+   21  sudo snap --clasic install code
+   22  code .
+   23  sudo snap --clasic install code
+   24  g++
+   25  g++ main.cpp -o main.exe
+   26  sudo apt install make cmake
+   27  ls
+   28  code
+   29  sudo apt get code
+   30  sudo apt-get install code
+   31  sudo snap install code
+   32  cmake .
+   33  ls
+   34  make
+   35  ./main
+   36  exit
+   37  ls
+   38  ls
+   39  cd ejercicios/
+   40  mkdir ej1
+   41  mv *.cpp ej1/
+   42  mv utils.h ej1/
+   43  cd ej1/
+   44  ls
+   45  sudo apt install cmake
+   46  rm -fr ./*
+   47  ls
+   48  cd ander_ej1/
+   49  cmake .
+   50  make .
+   51  ls
+   52  make
+   53  ./servidor
+   54  ./servidor
+   55  nano clienteMain.cpp
+   56  cat clienteMain.cpp
+   57  cd ..
+   58  cd ander_ej1/
+   59  cmake
+   60  cmake .
+   61  make
+   62  ls
+   63  ./servidor
+   64  nano ./clienteMain.cpp
+   65  nano servidorMain.cpp
+   66  cmake .
+   67  make
+   68  ./servidor
+   69  exit
+   70  ls
+   71  cd ejercicios/serializar/
+   72  cd ander_ej1/
+   73  nano serialize.hpp
+   74  nano serialize.hpp
+   75  cmake .
+   76  make
+   77  nano serialize.hpp
+   78  cmake .
+   79  make
+   80  cmake .
+   81  make
+   82  ./cliente
+   83  ls
+   84  rm CMakeCache.txt
+   85  cmake .
+   86  make
+   87  ls
+   88  ls -l
+   89  ./cliente
+   90  sudo ufw status verbose
+   91  sudo ufw allow 22/tcp
+   92  sudo ufw allow 30001/tcp
+   93  ./cliente
+   94  ./cliente
+   95  nano clienteMain.cpp
+   96  cmake .
+   97  make
+   98  ./cliente
+   99  nano clienteMain.cpp
+  100  cmake .
+  101  make
+  102  ./cliente
+  103  ./servidor
+  104  cmake .
+  105  make
+  106  ./servidor
+  107  cmake .
+  108  make
+  109  ./servidor
+  110  cmake .
+  111  make
+  112  ./servidor
+  113  ls
+  114  cd ..
+  115  rm -f ander_ej1/
+  116  rm -rf ander_ej1/
+  117  cmake .
+  118  cd ej_1/
+  119  cmake .
+  120  make
+  121  ./servidor
+  122  ls
+  123  rm CMakeCache.txt
+  124  cmake .
+  125  make
+  126  make
+  127  ./servidor
+  128  ./cliente
+  129  ./cliente
+  130  ls
+  131  cat clienteMain.cpp
+  132  cat servidorMain.cpp
+  133  ./server
+  134  cmake .
+  135  make
+  136  ./servidor
+  137  exit
+  138  ls
+  139  cd ejercicios/
+  140  ls
+  141  cd ..
+  142  mv ej0 ejercicios/
+  143  cd ejercicios/
+  144  ls
+  145  cd ej_02/
+  146  ls
+  147  cmake .
+  148  nano CMake
+  149  nano CMakeLists.txt
+  150  cmake .
+  151  make
+  152  ./main
+  153  cd ..
+  154  ls
+  155  ls
+  156  cd ej_02/
+  157  cmake .
+  158  cmake .
+  159  make
+  160  cmake .
+  161  make
+  162  main
+  163  ./main
+  164  cd ejercicios/ej_02
+  165  cmake .
+  166  make
+  167  ls
+  168  cd ..
+  169  ls
+  170  cd ej_02/
+  171  ls
+  172  ls
+  173  cmake .
+  174  cd ..
+  175  cd ej_02/
+  176  cmake .
+  177  make
+  178  ./main
+  179  ./cliente
+  180  ./server
+  181  ./server
+  182  nano holaMundo_imp.cpp
+  183  cmake .
+  184  make
+  185  ./server
+  186  ls
+  187  cd ..
+  188  cd ej_02/
+  189  ./server
+  190  ls
+  191  cd practica_1/
+  192  ls
+  193  cd fileManager/
+  194  cmake .
+  195  ls
+  196  rm CMakeCache.txt
+  197  cmake .
+  198  ls
+  199  cd ..
+  200  ls
+  201  rm -fr fileManager/
+  202  ls
+  203  ls
+  204  cd fileManager/
+  205  ls
+  206  cmake .
+  207  rm CMakeCache.txt
+  208  cmake .
+  209  make
+  210  cmake .
+  211  make
+  212  ls
+  213  ./fileClient
+  214  ls
+  215  cd dirprueba/
+  216  echo "$PWD"
+  217  cd
+  218  cd practica_1/fileManager/
+  219  ls
+  220  rm CMakeCache.txt
+  221  cmake .
+  222  nano CMakeLists.txt
+  223  mv fileMaganerServer.cpp fileManagerServer.cpp
+  224  ls
+  225  cmake .
+  226  make
+  227  ls
+  228  cmake .
+  229  make
+  230  nano mainFileServer.cpp
+  231  nano mainFileServer.cpp
+  232  cmake .
+  233  make
+  234  nano CMakeLists.txt
+  235  cmake .
+  236  make
+  237  ./fileServer
+  238  exit
+  239  exit
+  240  exit
+  241  cd practica_1/fileManager/
+  242  ls
+  243  cmake .
+  244  rm CMakeCache.txt
+  245  cmake .
+  246  make
+  247  ls
+  248  ./fileServer
+  249  cmake .
+  250  rm CMakeCache.txt
+  251  cmake .
+  252  make
+  253  ./fileServer
+  254  ls
+  255  cat dirprueba/A_El_que_escribe.txt
+  256  cat dirprueba/B_El_que_escribe.txt
+  257  cat dirprueba/B_El_que_lee.txt
+  258  ./fileServer
+  259  ./fileServer
+  260  ./fileServer
+  261  ./fileServer
+  262  ./fileServer
+  263  ./fileServer
+  264  ./fileServer
+  265  ls
+  266  cd dirprueba/
+  267  ls
+  268  cd ..
+  269  cd practica_1/
+  270  ls
+  271  cd fileManager/
+  272  ls
+  273  ./fileServer
+  274  ./fileServer
+  275  cd practica_1/fileManager/
+  276  ./fileServer
+  277  cat dirprueba/prueba1.txt
+  278  ./fileServer
+  279  ./fileServer
+  280  ls
+  281  cd practica_1/
+  282  cd fileManager/
+  283  ls
+  284  rm CMakeCache.txt
+  285  cmake .
+  286  make
+  287  ls
+  288  ./fileServer
+  289  sudo apt purge docker
+  290  sudo apt purge docker*
+  291  sudo rm -r /etc/docker
+  292  sudo rm -r /etc/apt/sources.list.d/docker.list
+  293  sudo rm -r /etc/apt/sources.list.d/kubernetes.list
+  294  sudo apt purge containerd
+  295  sudo swapoff /swap.img
+  296  sudo swapoff
+  297  sudo swapoff /swap.img
+  298  sudo nano /etc/fstab
+  299  sudo cat /etc/fstab
+  300  sudo swapoff -a
+  301  top
+  302  sudo apt-get update && sudo apt-get install -y apt-transport-https gnupg2 curl
+  303  curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key add -
+  304  echo "deb https://apt.kubernetes.io kubernetes-xenial main" | sudo tee -a /etc/apt/sources.list.d/kubernetes.list
+  305  sudo apt-get update
+  306  sudo apt-get install -y kubectl kubeadm kubernetes-cni
+  307  sudo apt-get install -y containerd
+  308  sudo apt-get install -y docker.io
+  309  sudo apt-get install -y conntrack
+  310  sudo modprobe overlay
+  311  sudo modprobe br_netfilter
+  312  sudo tee /etc/sysctl.d/kubernetes.conf<<EOF
+  313  net.bridge.bridge-nf-call-ip6tables = 1
+  314  net.bridge.bridge-nf-call-iptables = 1
+  315  net.ipv4.ip_forward = 1
+  316  EOF
+  317  sudo nano /etc/sysctl.d/kubernetes.conf
+  318  sudo tee /etc/docker/daemon.json <<EOF
+  319  {
+  320    "exec-opts": ["native.cgroupdriver=systemd"],
+  321    "log-driver": "json-file",
+  322    "log-opts": {
+  323      "max-size": "100m"
+  324    },
+  325    "storage-driver": "overlay2"
+  326  }
+  327  EOF
+  328  sudo nano /etc/docker/daemon.json
+  329  sudo systemctl daemon-reload
+  330  sudo systemctl restart docker
+  331  sudo systemctl enable docker.service
+  332  sudo systemctl enable kubelet.service
+  333  sudo apt-get install -y kubectl kubeadm kubernetes-cni
+  334  sudo kubeadm init
+  335  sudo kubeadm init
+  336  sudo kubeadm init
+  337  ls
+  338  cd kubernetes/
+  339  ls
+  340  cd scripts_kubernetes/
+  341  kub reset.sh
+  342  ls
+  343  ./kub_reset.sh
+  344  sudo ./kub_reset.sh
+  345  ls
+  346  sudo chmod +x *
+  347  sudo ./kub_reset.sh
+  348  sudo ./kub_install.sh
+  349  kubectl get nodes
+  350  sudo kubectl get nodes
+  351  kubectl get cs
+  352  sudo kubectl get cs
+  353  kubectl get nodes
+  354  sudo kubectl get nodes
+  355  mkdir -p $HOME/.kube
+  356  sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
+  357  sudo chown $(id -u):$(id -g) $HOME/.kube/config
+  358  sudo chmod a+x /usr/local/bin/weave
+  359  kubectl get nodes
+  360  kubectl taint nodes --all node-role.kubernetes.io/control-plane- node-role.kubernetes.io/master-
+  361  sudo systemctl start docker
+  362  ls
+  363  cd kubernetes/
+  364  ls
+  365  ls
+  366  cd scripts_kubernetes/
+  367  ls
+  368  nano kub_install.sh
+  369  sh kub_install.sh
+  370  ls
+  371  sh kub_reset.sh
+  372  sudo sh kub_reset.sh
+  373  sudo snap install kubectl
+  374  sudo snap install --classic kubectl
+  375  sudo sh kub_reset.sh
+  376  nano kub_install.sh
+  377  sudo sh kub_install.sh
+  378  history
+  379  kubectl get nodes
+  380  sudo kubectl get nodes
+  381  nano kub_install.sh
+  382  kubectl get nodes
+  383  sudo kubectl get nodes
+  384  sudo -i
+  385  strace -eopenat kubectl version
+  386  kubectl get nodes
+  387  sudo kubectl get nodes
+  388  exit
+  389  cd kubernetes/scripts_kubernetes/
+  390  nano kub_install.sh
+  391  sudo ./kub_reset.sh
+  392  nano kub_install.sh
+  393  sudo ./kub_install.sh
+  394  sudo kubectl get nodes
+  395  y
+  396  sudo kubectl get nodes
+  397  sudo kubectl get nodes
+  398  sudo kubectl get nodes
+  399  exit
+  400  sudo kubectl create deployment kubernetes-bootcamp --image=grc.io/google-samples/kubernetes-bootcamp:v1 --replicas=3
+  401  kubectl expose deployment kubernetes-bootcamp --type="NodePort" --port 8080service/kubernetes-bootcamp exposed
+  402  sudo kubectl expose deployment kubernetes-bootcamp --type="NodePort" --port 8080service/kubernetes-bootcamp exposed
+  403  sudo kubectl expose deployment kubernetes-bootcamp --type="NodePort" --port 8080 service/kubernetes-bootcamp exposed
+  404  sudo kubectl expose deployment kubernetes-bootcamp --type="NodePort" --port 8080 service/kubernetes-bootcamp
+  405  sudo kubectl exec -ti fdsafsd
+  406  sudo kubectl get pods
+  407  sudo kubectl exec -ti kubernetes-bootcamp-76d96d5f69-gcbp8
+  408  sudo kubectl exec -it kubernetes-bootcamp-76d96d5f69-gcbp8
+  409  sudo kubectl exec kubernetes-bootcamp-76d96d5f69-gcbp8 -ti
+  410  sudo kubectl exec -it kubernetes-bootcamp-76d96d5f69-gcbp8 /bin/sh
+  411  sudo kubectl get pods
+  412  sudo kubectl delete pod kubernetes-bootcamp
+  413  sudo kubectl delete pod kubernetes-bootcamp*
+  414  sudo kubectl delete pod kubernetes-bootcamp kubernetes-bootcamp-76d96d5f69-gcbp8
+  415  sudo kubectl delete pod kubernetes-bootcamp kubernetes-bootcamp-76d96d5f69-gcbp8
+  416  sudo kubectl get pods
+  417  sudo kubectl delete deployment kubernetes-bootcamp
+  418  sudo kubectl get pods
+  419  sudo kubectl create deployment kubernetes-bootcamp --image=gcr.io/google-samples/kubernetes-bootcamp:v1 --replicas=3
+  420  sudo kubectl get pods
+  421  sudo kubectl get pods
+  422  sudo kubectl expose deployment kubernetes-bootcamp --type="NodePort" --port 8080 service/kubernetes-bootcamp exposed
+  423  sudo kubectl exec -it kubernetes-bootcamp-76d96d5f69-gcbp8 /bin/sh
+  424  sudo kubectl get pods
+  425  sudo kubectl exec -ti kubernetes-bootcamp-75c5d958ff-5v7tz -- bash
+  426  ip a
+  427  sudo kubectl expose deployment kubernetes-bootcamp --type="NodePort" --port 8080
+  428  sudo kubectl get services
+  429   kubectl get deployments
+  430  sudo  kubectl get deployments
+  431  sudo kubectl delete deployment kubernetes-bootcamp
+  432  sudo kubectl get services
+  433  sudo kubectl delete service kubernetes-bootcamp
+  434  wxit
+  435  exit
+  436  history
+  437  sudo kubectl get pods
+  438  cd kubernetes/
+  439  ls
+  440  sudo kubectl apply -f bootcamp.yaml
+  441  sudo kubectl apply -f service.yaml
+  442  ls
+  443  sudo kubectl apply -f service.yaml
+  444  sudo kubectl apply -f service.yaml
+  445  sudo kubectl apply -f service.yaml
+  446  sudo kubectl apply -f service.yaml
+  447  sudo kubectl apply -f service.yaml
+  448  sudo kubectl apply -f service.yaml
+  449  sudo kubectl apply -f service.yaml
+  450  kubectl get services
+  451  sudo kubectl get services
+  452  kubectl get deployment
+  453  sudo kubectl get deployment
+  454  sudo kubectl delete deployment kubernetes-bootcamp
+  455  sudo kubectl apply -f bootcamp.yaml
+  456  cd ..
+  457  cd kubernetes/
+  458  mkdir directorio-prueba
+  459  nano bootcamp.yaml
+  460  ls
+  461  sudo kubectl apply -f bootcamp.yaml
+  462  sudo kubectl apply -f bootcamp.yaml
+  463  sudo kubectl apply -f bootcamp.yaml
+  464  sudo kubectl apply -f bootcamp.yaml
+  465  sudo kubectl apply -f bootcamp.yaml
+  466  sudo kubectl apply -f bootcamp.yaml
+  467  sudo kubectl apply -f bootcamp.yaml
+  468  sudo kubectl get pods
+  469  ls
+  470  cd ..
+  471  ls
+  472  sudo kubectl apply -f bootcamp.yaml
+  473  cd kubernetes/
+  474  sudo kubectl apply -f bootcamp.yaml
+  475  ls
+  476  cd practica_1/
+  477  ls
+  478  cd fileManager/
+  479  ls
+  480  cmake .
+  481  make
+  482  ./fileServer
+  483  ./fileServer &
+  484  kill 6396
+  485  ./fileServer & > ./logs
+  486  ls
+  487  kill 6442
+  488  ./fileServer & >> ./logs
+  489  a
+  490  cat ./logs
+  491  kill 6474
+  492  ./fileServer >> ./logs &
+  493  cat ./logs
+  494  kill 6517
+  495  ./fileServer >> ./logs &
+  496  cat ./logs
+  497  cat ./logs
+  498  exit
+  499  kubectl list
+  500  sudo kubectl get deployments
+  501  docker login
+  502  docker images
+  503  mkdir demoDocker
+  504  cd demoDocker/
+  505  ls
+  506  nano Dockerfile
+  507  docker build .
+  508  nano index.html
+  509  docker build .
+  510  docker images
+  511  docker tag ac341b55c4ba javiortig/ubuntu_apache:1.0
+  512  docker images
+  513  docker push javiortig/ubuntu_apache
+  514  docker push javiortig/ubuntu_apache:1.0
+  515  ls
+  516  cd ..
+  517  ls
+  518  cd kubernetes/
+  519  ls
+  520  cp *.yaml ../demoDocker/
+  521  cd ../demoDocker
+  522  ls
+  523  ls
+  524  mv bootcamp.yaml apache.yaml
+  525  nano apache.yaml
+  526  sudo kubectl get deployments
+  527  sudo kubectl delete deployments kubernetes-bootcamp
+  528  sudo kubectl apply -f apache.yaml
+  529  sudo kubectl describe pods
+  530  sudo kubectl get pods
+  531  sudo kubectl describe pods
+  532  nano service.yaml
+  533  sudo kubectl apply -f service.yaml
+  534  sudo kubectl get services
+  535  cd practica-1/
+  536  ls
+  537  cd multMatrix/
+  538  cmake .
+  539  rm CMakeCache.txt
+  540  cmake .
+  541  make
+  542  ./mainServer
+  543  ./mainServer
+  544  cmake .
+  545  make
+  546  ./mainServer
+  547  cd ../fileManager/
+  548  cmake .
+  549  rm CMakeLists.txt
+  550  cmake .
+  551  ls
+  552  rm CMakeCache.txt
+  553  cmake .
+  554  make
+  555  ./fileServer
+  556  ./fileServer
+  557  cd ../multMatrix/
+  558  ./mainServer
+  559  cd ../multMatrix/
+  560  cd ../fileManager/
+  561  cmake .
+  562  make
+  563  ./clientConsole
+  564  ./fileServer
+  565  ./fileServer
+  566  cd ..
+  567  cd multMatrix/
+  568  cmake .
+  569  make
+  570  ./mainServer
+  571  ./main_multMatrix
+  572  ./mainClient
+  573  ./mainServer
+  574  ./mainServer
+  575  nano mainServer.cpp
+  576  cmake .
+  577  make
+  578  ./mainServer
+  579  cd practica-1/
+  580  cd fileManager/
+  581  ./fileServer
+  582  cd ../multMatrix/
+  583  ./mainServer
+  584  cd practica-1/multMatrix/
+  585  ./mainServer
+  586  cat resultado.txt
+  587  cat resultado2.txt
+  588  cd ../fileManager/
+  589  cd dirprueba/
+  590  ls
+  591  cat prueba1
+  592  cat prueba1.txt
+  593  cd ..
+  594  ./fileServer
+  595  cd dirprueba/
+  596  ls
+  597  cat prueba2.txt
+  598  ls
+  599  exit
+  600  top
+  601  sudo kubetcl get deployments
+  602  sudo kubectl get deployments
+  603  df
+  604  sudo apt install mariadb-*
+  605  sudo mariadb
+  606  sudo mariadb
+  607  sudo mariadb
+  608  quit
+  609  exit
+  610  mariadb
+  611  sudo mariadb
+  612  sudo apt get install mariadb-client
+  613  sudo apt-get install mariadb-client
+  614  sudo apt-get install mariadb-server
+  615  sudo apt-get install -y mariadb-*
+  616   sudo systemctl start mariadb
+  617   sudo systemctl is-active mariadb.service
+  618   sudo systemctl stop mariadb.service
+  619   sudo systemctl start mariadb.service
+  620  sudo systemctl is-enabled mariadb.service
+  621  mariadb
+  622  sudo mariadb
+  623  mariadb
+  624  sudo mariadb
+  625  sudo mariadb
+  626  sudo systemctl restart mariadb
+  627  sudo systemctl restart mariadb.service
+  628  sudo apt purge mariadb*
+  629  sudo apt install mysql-client mysql-server
+  630  sudo mysql
+  631  mysql
+  632  mysql -u admin -p
+  633  history

@@ -1,0 +1,21 @@
+kubectl delete deployments filemanager
+kubectl delete services filemanager-entrypoint
+kubectl apply -f fileManager.yaml
+kubectl apply -f fileManager_Service.yaml
+kubectl get deployments
+kubectl get pods
+kubectl get services
+
+kubectl exec -ti multmatrix-767fbf7469-jgzk4 -- bash
+
+multmatrix-767fbf7469-jgzk4
+
+multmatrix-767fbf7469-v5krp
+
+kubectl exec -ti filemanager-7f94cffdf7-rg4wj -- bash
+
+filemanager-7f94cffdf7-k8pzv
+
+filemanager-7f94cffdf7-m5lss
+
+filemanager-7f94cffdf7-rg4wj

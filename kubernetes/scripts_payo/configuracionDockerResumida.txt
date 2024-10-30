@@ -1,0 +1,11 @@
+docker login
+docker images
+docker build .
+docker images
+docker tag <tag_docker_imagen> quiquesancho/ubuntu_apache:1.0
+docker push quiquesancho/ubuntu_apache:1.0
+kubectl apply -f <archivo.yaml>
+kubectl get deployments
+kubectl get pods
+kubectl apply -f <archivo_service.yaml>
+kubectl get services

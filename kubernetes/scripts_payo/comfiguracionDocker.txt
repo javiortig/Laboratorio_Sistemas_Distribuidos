@@ -1,0 +1,25 @@
+docker login
+docker images
+mkdir demoDocker
+cd demoDocker/
+nano Dockerfile
+docker build .
+nano index.html
+docker build .
+docker images
+docker tad 5acf96e68cd6 quiquesancho/ubuntu_apache:1.0
+docker tag 5acf96e68cd6 quiquesancho/ubuntu_apache:1.0
+docker images
+docker push quiquesancho/ubuntu_apache:1.0
+cp ../'.yaml .
+ls
+kubectl get deployments
+kubectl delete deployments kubernetes-bootcamp
+kubectl get deployments
+kubectl apply -f apache.yaml
+kubectl get deployments
+kubectl describe pods
+kubectl get pods
+kubectl apply -f service.yaml
+kubectl get pods
+curl 52.22.238.188:31001

@@ -1,0 +1,25 @@
+sudo kubectl get nodes
+sudo kubectl create deployment kubernetes-bootcamp --image=gcr.io/google-samples/kubernetes-bootcamp:v1 --replicas=3
+sudo kubectl get pods
+sudo kubectl exec -it kubernetes-bootcamp-76d96d5f69-gcbp8 /bin/sh
+
+sudo kubectl delete pod kubernetes-bootcamp kubernetes-bootcamp-76d96d5f69-gcbp8
+
+sudo kubectl delete deployment kubernetes-bootcamp
+
+sudo kubectl create deployment kubernetes-bootcamp --image=gcr.io/google-samples/kubernetes-bootcamp:v1 --replicas=3
+
+
+sudo kubectl expose deployment kubernetes-bootcamp --type="NodePort" --port 8080 service/kubernetes-bootcamp exposed
+sudo kubectl exec -it kubernetes-bootcamp-76d96d5f69-gcbp8 /bin/sh
+sudo kubectl exec -ti kubernetes-bootcamp-75c5d958ff-5v7tz -- bash
+ip a
+sudo kubectl expose deployment kubernetes-bootcamp --type="NodePort" --port 8080
+sudo kubectl get services
+kubectl get deployments
+sudo  kubectl get deployments
+sudo kubectl delete deployment kubernetes-bootcamp
+sudo kubectl get services
+sudo kubectl delete service kubernetes-bootcamp
+sudo kubectl apply -f service.yaml
+exit

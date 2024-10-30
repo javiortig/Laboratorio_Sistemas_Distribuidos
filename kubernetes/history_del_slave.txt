@@ -1,0 +1,236 @@
+
+    1  ls
+    2  cd ejercicios/
+    3  ls
+    4  mkdir ej1
+    5  mv *.cpp ej1/
+    6  mv utils.h ej1/
+    7  ls
+    8  ls
+    9  cd ej1/
+   10  ls
+   11  cmake
+   12  sudo snap install cmake
+   13  sudo apt install cmake
+   14  ls
+   15  cmake
+   16  cmake clienteMain.cpp
+   17  cmake .
+   18  ccmake
+   19  make
+   20  ls
+   21  g++
+   22  g++ clienteMain.cpp
+   23  g++ -o cliente clienteMain.cpp
+   24  g++ --help
+   25  g++ -o cliente clienteMain.cpp
+   26  cmake .
+   27  mv clienteMain.cpp main.cpp
+   28  cmake .
+   29  ls
+   30  rm ./*
+   31  rm -fr ./*
+   32  ls
+   33  cd ander_ej1/
+   34  cmake .
+   35  make
+   36  ls
+   37  ./cliente
+   38  ./cliente
+   39  cmake .
+   40  cd ..
+   41  cd ander_ej1/
+   42  cmake .
+   43  make .
+   44  make
+   45  ./cliente
+   46  nano ./cliente
+   47  nano ./clienteMain.cpp
+   48  nano ./clienteMain.cpp
+   49  nano ./servidorMain.cpp
+   50  nano ./servidorMain.cpp
+   51  cmake .
+   52  make
+   53  ./cliente
+   54  exit
+   55  cd ejercicios/ej1/
+   56  mv -fr serializar/ ..
+   57  mv -f serializar/ ..
+   58  cd ..
+   59  cd serializar/
+   60  ls
+   61  cd ander_ej1/
+   62  ls
+   63  history
+   64  cmake .
+   65  make
+   66  nano serialize.hpp
+   67  cmake .
+   68  make
+   69  ls
+   70  cmake .
+   71  make
+   72  nano ser
+   73  nano serialize.hpp
+   74  nano serialize.hpp
+   75  cmake .
+   76  make
+   77  nano serialize.hpp
+   78  nano serialize.hpp
+   79  nano serialize.hpp
+   80  cmake .
+   81  make
+   82  cmake .
+   83  make
+   84  cmake .
+   85  make
+   86  cmake .
+   87  make
+   88  cmake .
+   89  make
+   90  cmake .
+   91  make
+   92  cmake .
+   93  make
+   94  cmake .
+   95  make
+   96  ./servidor
+   97  rm CMakeCache.txt
+   98  cmake .
+   99  make
+  100  sudo ufw allow 30001/tcp
+  101  ./servidor
+  102  ./cliente
+  103  cd CMakeFiles/
+  104  ls
+  105  cmake .
+  106  cd ..
+  107  cmake .
+  108  make
+  109  ./cliente
+  110  cmake .
+  111  make
+  112  ./cliente
+  113  ./cliente
+  114  cd ..
+  115  rm -fr ander_ej1/
+  116  cd ej_1/
+  117  cmake
+  118  cmake .
+  119  make .
+  120  make
+  121  ./cliente
+  122  rm CMakeCache.txt
+  123  cmake .
+  124  make
+  125  ./cliente
+  126  ./cliente
+  127  ./servidor
+  128  ls
+  129  cat clienteMain.cpp
+  130  cmake .
+  131  make
+  132  ./cliente
+  133  exit
+  134  exit
+  135  cd ejercicios/ej_02/
+  136  ls
+  137  cmake .
+  138  make
+  139  ./cliente
+  140  ./cliente
+  141  ls
+  142  nano holaMundo_imp.cpp
+  143  cmake .
+  144  make
+  145  ./cliente
+  146  cd ejercicios/ej_02/
+  147  make .
+  148  cmake .
+  149  make
+  150  nano maincliente.cpp
+  151  nano mainServer.cpp
+  152  ./cliente
+  153  ./cliente
+  154  ./cliente
+  155  ./cliente
+  156  cd practica_1/fileManager/
+  157  ls
+  158  cmake .
+  159  rm CMakeLists.txt
+  160  cmake .
+  161  rm CMakeCache.txt
+  162  cmake .
+  163  make
+  164  ./fileClient
+  165  exit
+  166  exit
+  167  exit
+  168  ls
+  169  mkdir kubernetes
+  170  cd kubernetes/
+  171  cd ..
+  172  rm kubernetes/
+  173  rm -r kubernetes/
+  174  ls
+  175  cd kubernetes/scripts_kubernetes/
+  176  nano kub_install.sh
+  177  nano kub_install.sh
+  178  nano kub_install.sh
+  179  sh kub_reset.sh
+  180  sudo sh kub_reset.sh
+  181  sudo sh kub_install.sh
+  182  nano kub_install.sh
+  183  ls
+  184  sh kubeadm_join
+  185  sudo sh kubeadm_join
+  186  kubectl get nodes
+  187  sudo kubectl get nodes
+  188  sudo kubectl get nodes
+  189  kubeadm join 172.31.75.106:6443 --token r9yduf.84owjw44yym9ubtt --discovery-token-ca-cert-hash sha256:2fe7ad6f7ea98c7804aa155564c01faa276344406d641fd73dbbc5cee4fb6283
+  190  sudo kubeadm join 172.31.75.106:6443 --token r9yduf.84owjw44yym9ubtt --discovery-token-ca-cert-hash sha256:2fe7ad6f7ea98c7804aa155564c01faa276344406d641fd73dbbc5cee4fb6283
+  191  ls
+  192  kubectl get nodes
+  193  sudo kubectl get nodes
+  194  sudo kubeadm join 172.31.75.106:6443 --token r9yduf.84owjw44yym9ubtt --discovery-token-ca-cert-hash sha256:2fe7ad6f7ea98c7804aa155564c01faa276344406d641fd73dbbc5cee4fb6283
+  195  sudo kubectl create deployment kubernetes-bootcamp --image=gcr.io/google-samples/kubernetes-bootcamp:v1 --replicas=3
+  196  cd kubernetes/scripts_kubernetes/
+  197  ls
+  198  nano kub_install.sh
+  199  nano kub_install.sh
+  200  sudo ./kub_reset.sh
+  201  ls
+  202  sudo chmod +x ku_*
+  203  sudo chmod +x kub_*
+  204  sudo ./kub_reset.sh
+  205  sudo ./kub_install.sh
+  206  sudo kubeadm reset
+  207  sudo kubectl get nodes
+  208  sudo kubeadm join 172.31.75.106:6443 --token m121qq.n52gdo762vhiz6j2         --discovery-token-ca-cert-hash sha256:9aef6f7181006c08ab4e460cb9e268730717ca8ee7d11be8c67d37fa41216850
+  209  sudo kubectl get nodes
+  210  sudo kubeadm join 172.31.75.106:6443 --token m121qq.n52gdo762vhiz6j2 --discovery-token-ca-cert-hash sha256:9aef6f7181006c08ab4e460cb9e268730717ca8ee7d11be8c67d37fa41216850
+  211  sudo ./kub_reset.sh
+  212  nano kub_install.sh
+  213  sudo ./kub_install.sh
+  214  sudo kubeadm join 172.31.75.106:6443 --token m121qq.n52gdo762vhiz6j2 --discovery-token-ca-cert-hash sha256:9aef6f7181006c08ab4e460cb9e268730717ca8ee7d11be8c67d37fa41216850
+  215  sudo kubectl get nodes
+  216  eit
+  217  exit
+  218  ip a
+  219  exit
+  220  mkdir compartido
+  221  cd compartido/
+  222  ssh 44.211.112.120:30000
+  223  ssh 44.211.112.120
+  224  cd ..
+  225  ks
+  226  ls
+  227  cd compartido/
+  228  ls
+  229  cat "holaMundo" > holamundo.txt
+  230  cat "holaMundo" >> holamundo.txt
+  231  touch holamundo.txt
+  232  cat "holaMundo" > holamundo.txt
+  233  cat holamundo.txt "hola que pasa"
+  234  cat "hola que pasa"
+  235  nano holamundo.txt

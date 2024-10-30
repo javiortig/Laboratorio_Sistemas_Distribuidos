@@ -1,0 +1,30 @@
+sudo sshfs ubuntu@ip:/home/ubuntu/Ej0 /home/ubuntu/Ej0 -o IdentityFile=/home/ubuntu/ClaveEc2SisDis.pem -o allow_other
+
+Ip maquina1:cliente
+	privada: 172.31.11.99
+
+Ip maquina2:servidor
+	privada: 172.31.15.97
+
+Ip maquina3:broker
+	privada: 172.31.5.136
+
+sudo sshfs ubuntu@172.31.11.99:/home/ubuntu/Ej0 /home/ubuntu/Ej0 -o IdentityFile=/home/ubuntu/ClaveEc2SisDis.pem -o allow_other
+
+cd Ej0/Ej0_2
+
+sudo sshfs ubuntu@172.31.11.99:/home/ubuntu/Practica1 /home/ubuntu/Practica1 -o IdentityFile=/home/ubuntu/ClaveEc2SisDis.pem -o allow_other
+
+Comando kubernetes Cliente
+
+kubeadm join 172.31.11.99:6443 --token n5wms4.fomms0qk6j3dxdf8 \
+>         --discovery-token-ca-cert-hash sha256:dc8d85f87e6273cf02914b9cab0289ef21b0188c8a28a7108309743eab845dd7
+
+Comando creacion despliegue
+
+kubectl create deployment kubernetes-bootcamp --image=gcr.io/google-samples/kubernetes-bootcamp:v1 --replicas=3
+
+
+project(Practica1_Broker LANGUAGES CXX)
+add_executable(mainBroker mainBroker.cpp broker.h broker.cpp utils.h utils.cpp)
+target_link_libraries(mainBroker pthread)
